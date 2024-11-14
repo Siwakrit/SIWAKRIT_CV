@@ -3,7 +3,7 @@
     import { FaGithub } from "react-icons/fa";
     import { FaLinkedinIn } from "react-icons/fa";
     import { FaFacebook } from "react-icons/fa";
-    import { WiAlien } from "react-icons/wi";
+ 
 
     const Navbar = () => {
     return (
@@ -11,7 +11,10 @@
         
         <ul>
             <li>
-            <WiAlien className='hover:scale-110 hover:text-orange-500' size={60} />
+                <img src="Img/WebLogo.svg" alt="Web Logo" 
+                className='hover:scale-110 hover:text-orange-500' 
+                width={50} height={50}
+                />
             </li>
         </ul>
     

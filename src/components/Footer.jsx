@@ -1,11 +1,14 @@
 import React from 'react'
+import { WiAlien } from "react-icons/wi";
 
 const Footer = () => {
   return (
     <div className='flex justify-between items-center p-5 
-    border-t border-t-[#33353F]'>
+    md:border-t border-t-[#33353F]'>
         <ul>
-            <li>Logo</li>
+            <li>
+            <WiAlien className='hover:scale-110 hover:text-orange-500' size={60} />
+            </li>
         </ul>
 
         <ul>
