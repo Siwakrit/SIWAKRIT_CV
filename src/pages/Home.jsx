@@ -31,7 +31,7 @@ const Hero = () => {
       {/* Right section with image */}
       <div className='flex justify-center items-center w-full md:w-1/2'>
         <img
-          src='public/Img/Profile1.jpg'
+          src='/Img/Profile1.jpg'
           width={1000}
           height={400}
           className='rounded-md hover:scale-110 hover:shadow-lg hover:shadow-red-500 transition-transform'
