@@ -53,7 +53,7 @@ const About = () => {
     <section className="text-black " id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="flex justify-center items-center">
-        <img src="/src/assets/Img/Profile0.jpg" 
+        <img src="/src/Img/Profile0.jpg" 
         className="rounded-xl md:rounded-3xl hover:scale-110 
         transition-transform hover:shadow-2xl hover:shadow-red-600"
         width={500} height={500} alt="aboutimg" />
