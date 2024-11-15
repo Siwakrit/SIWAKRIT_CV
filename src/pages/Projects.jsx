@@ -14,7 +14,7 @@ const projects = [
     {
         id: 2,
         title: 'Project 2',
-        image: 'https://pbs.twimg.com/media/GKiT9ofbMAAM0in?format=jpg&name=large',
+        image: 'https://pbs.twimg.com/media/GKiTwSMasAA-6wi?format=jpg&name=large',
         description: 'Description of Project 2',
         category: 'Ecommerce',
         technologies: 'React, Node.js, MongoDB',
@@ -121,7 +121,7 @@ const Projects = () => {
             </ul>
 
             {/* ใช้ <a> เพื่อทำให้การ์ดคลิกได้ */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-4 w-[100%] h-[80%]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-4 w-[100%] h-[100%]">
         
                 {filterProjects().map((project) => (
                     <a key={project.id} href={project.gitUrl} target="_blank" rel="noopener noreferrer" 
@@ -131,7 +131,7 @@ const Projects = () => {
                         <div className="flex justify-center w-[100%] h-[80%] ">
                             <img src={project.image} width={250} height={200} alt="" className="rounded-md  hover:scale-110 hover:shadow-2xl hover:shadow-rose-600 object-cover" />
                         </div>
-                        <div className="flex flex-col gap-2 pt-2 ">
+                        <div className="flex flex-col gap-2 md:pt-2 p-2">
                             <h1 className="text-xl font-bold hover:text-red-600">{project.title}</h1>
                             <p className="text-sm">{project.description}</p>
                             <p className="text-sm">Technologies used: {project.technologies}</p>
