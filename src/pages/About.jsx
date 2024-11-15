@@ -34,6 +34,7 @@ const tabs = [
     content: (
       <ul className="list-disc pl-2">
         <li>Generation Thailand Junior Software Developer Bootcamp</li>
+        <li>Chinese Language HSK 5</li>
       </ul>
     ),
   },
