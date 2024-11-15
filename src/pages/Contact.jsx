@@ -5,7 +5,9 @@
 
     const Contact = () => {
     return (
-        <div className='flex flex-col md:flex-row justify-center items-center p-6 md:p-20 gap-8 h-screen'>
+        <div className='flex flex-col md:flex-row justify-center 
+        w-screen items-center
+        md:items-center p-6 md:p-20 gap-8 h-screen'>
       {/* Contact Info Section */}
         <div className='flex flex-col gap-5 md:w-1/2 items-center'>
             <button className='bg-red-500 border border-red-500 rounded-md p-2 text-white font-bold w-32 md:w-40 text-center hover:bg-white hover:text-red-500'>
