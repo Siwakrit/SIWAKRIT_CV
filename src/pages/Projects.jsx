@@ -129,7 +129,7 @@ const Projects = () => {
                     hover:scale-105 hover:shadow-2xl hover:shadow-rose-600
                     h-auto w-auto block bg-red-500 text-white">
                         <div className="flex justify-center">
-                            <img src={project.image} width={250} height={200} alt="" className="rounded-md hover:scale-110 object-cover" />
+                            <img src={project.image} width={250} height={200} alt="" className="rounded-md hover:scale-110 hover:shadow-2xl hover:shadow-rose-600 object-cover" />
                         </div>
                         <div className="flex flex-col gap-2 pt-2 ">
                             <h1 className="text-xl font-bold hover:text-red-600">{project.title}</h1>

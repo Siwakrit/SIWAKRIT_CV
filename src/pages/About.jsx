@@ -60,7 +60,7 @@ const About = () => {
         width={500} height={500} alt="aboutimg" />
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-black mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-black mb-4 hover:scale-110 hover:text-red-500">About Me</h2>
           <p className="text-base lg:text-lg hover:scale-105 hover:text-red-500">
           I have completed Generation Thailand's Junior Software Developer Bootcamp (Cohort 8). With 1 year and 7 months of experience as an 
           IT Project Coordinator (Chinese Skills) and a 4-year degree in Education of Chinese Language from China, 
@@ -74,7 +74,7 @@ const About = () => {
               <button
                 key={id}
                 onClick={() => handleTabChange(id)}
-                className={selectedTab === id ? "bg-red-500 rounded-sm text-white p-2 hover:underline hover:text-white hover:bg-red-500": ""}
+                className={selectedTab === id ? "bg-red-500 rounded-sm text-white p-2 font-bold hover:underline hover:text-white hover:bg-red-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-600 hover:font-bold active:bg-red-600 active:scale-90" : ""}
               >
                 {title}
               </button>

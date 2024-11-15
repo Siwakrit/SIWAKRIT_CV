@@ -68,7 +68,7 @@
             </li>
 
             <li>
-            <Link to="https://github.com/Siwakrit" target='_blank'>
+            <Link to="https://www.linkedin.com/in/siwakrit-pattaveesin/" target='_blank'>
             <FaLinkedinIn className='hover:scale-110 hover:text-blue-800' size={40}/>
             </Link>
             </li>
