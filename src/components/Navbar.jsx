@@ -12,7 +12,7 @@
             }
     return (
         <div className='flex justify-between items-center gap-2 p-3 
-        shadow-md w-screen'>
+        shadow-md w-[100%]'>
         
         <ul>
             <li>
