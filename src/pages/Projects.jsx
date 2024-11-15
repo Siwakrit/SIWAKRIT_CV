@@ -98,7 +98,7 @@ const Projects = () => {
     };
 
     return (
-        <div className="p-10 md:p-20">
+        <div className="p-10 md:p-20 mb-[2rem]">
             <div className="flex justify-center">
                 <h1 className="text-3xl md:text-3xl font-bold
                 hover:scale-110 hover:text-red-500">My Projects</h1>

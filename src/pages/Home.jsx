@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col h-screen 
+    <div className='flex flex-col h-screen mb-[2rem]
     w-[100%] md:flex-row p-10 md:p-20 gap-10'
     id='home'>
       {/* Left section with text */}

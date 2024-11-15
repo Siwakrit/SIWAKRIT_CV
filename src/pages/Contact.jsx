@@ -5,8 +5,8 @@
 
     const Contact = () => {
     return (
-        <div className='flex flex-col md:flex-row justify-center 
-        items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]'
+        <div className='flex flex-col md:flex-row justify-center mb-[2rem]
+         items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]'
         id='contact'>
       {/* Contact Info Section */}
         <div className='flex flex-col gap-5 md:w-1/2 items-center'>

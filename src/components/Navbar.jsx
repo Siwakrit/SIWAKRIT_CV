@@ -11,7 +11,7 @@
                 setToggle(!toggle); 
             }
     return (
-        <div className='flex justify-between items-center gap-2 p-3 
+        <div className='flex justify-between items-center gap-2 md:p-3 mb-[2rem]
         shadow-md w-[100%]'>
         
         <ul>
