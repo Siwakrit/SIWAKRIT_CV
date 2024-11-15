@@ -3,7 +3,7 @@ import { WiAlien } from "react-icons/wi";
 
 const Footer = () => {
   return (
-    <div className='flex justify-between items-center p-2  
+    <div className='flex justify-between items-center p-2 w-screen
     border-t-[#7f8188]  border-t  mt-5'>
         <ul>
             <li>
