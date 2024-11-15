@@ -5,7 +5,7 @@ const projects = [
     {
         id: 1,
         title: 'Project 1',
-        image: 'https://scontent.fbkk12-1.fna.fbcdn.net/v/t39.30808-6/453650845_1012735514187971_2591910729280885761_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oqMuMVMHEeYQ7kNvgFOIsA_&_nc_zt=23&_nc_ht=scontent.fbkk12-1.fna&_nc_gid=ALhKJZ_9OcueYWn7b0ZSX0H&oh=00_AYBvWZ4MlrQ3HhWI4PLaYdQJl6L3lsKlN0Gu-gpy_ORH4g&oe=673A2153',
+        image: 'Img/SKB_7890.jpg',
         description: 'Description of Project 1',
         category: 'Form',
         technologies: 'React, Node.js, MongoDB',

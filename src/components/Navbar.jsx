@@ -3,7 +3,7 @@
     import { FaGithub } from "react-icons/fa";
     import { FaLinkedinIn } from "react-icons/fa";
     import { FaFacebook } from "react-icons/fa";
- 
+
 
     const Navbar = () => {
         const [toggle, setToggle] = useState(false);
