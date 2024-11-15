@@ -1,4 +1,4 @@
-    import React from 'react'
+    import React, { useState } from 'react'
     import { Link } from 'react-router-dom'
     import { FaGithub } from "react-icons/fa";
     import { FaLinkedinIn } from "react-icons/fa";
@@ -6,15 +6,31 @@
  
 
     const Navbar = () => {
+        const [toggle, setToggle] = useState(false);
+            const handleToggle = () => {
+                setToggle(!toggle); 
+            }
     return (
-        <div className='flex justify-between items-center gap-2 p-5 shadow-md'>
+        <div className='flex justify-between items-center gap-2 p-3 
+        shadow-md w-screen'>
         
         <ul>
             <li>
-                <img src="Img/WebLogo.svg" alt="Web Logo" 
-                className='hover:scale-110 hover:text-orange-500' 
-                width={50} height={50}
-                />
+                {toggle === false ? (
+                    <img src="Img/CS.png" alt="Web Logo" 
+                    className='hover:scale-110 hover:text-orange-500' 
+                    width={80} height={50}
+                    onClick={handleToggle}
+                    />
+                ) : (
+                    <ul>
+                    <img src="Img/95.png" alt="Web Logo" 
+                    className='hover:scale-110 hover:text-orange-500' 
+                    width={80} height={50}
+                    onClick={handleToggle}
+                    />
+                    </ul>
+                )}
             </li>
         </ul>
     
@@ -23,23 +39,17 @@
 
         <li className='font-bold bg-blue-600 border border-blue-600 rounded-md p-2
             hover:bg-white hover:text-blue-600'>
-            <Link to="/">
-            Home
-            </Link>
+            <a href="#home">Home</a>
         </li>
 
         <li className='font-bold bg-blue-600 border border-blue-600 rounded-md p-2
             hover:bg-white hover:text-blue-600'>
-            <Link to="/contact">
-            Contact
-            </Link>
+            <a href="#contact">Contact</a>
         </li>
 
         <li className='font-bold bg-blue-600 border border-blue-600 rounded-md p-2
             hover:bg-white hover:text-blue-600'>
-            <Link to="/about">
-            About
-            </Link>
+            <a href="#about">About</a>
         </li>
 
         </ul>
