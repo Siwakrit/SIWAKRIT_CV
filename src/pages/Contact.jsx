@@ -5,7 +5,7 @@
 
     const Contact = () => {
     return (
-        <div className='flex flex-col md:flex-row justify-center mb-[2rem]
+        <div className='flex flex-col md:flex-row justify-center mb-[5rem]
          items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]'
         id='contact'>
       {/* Contact Info Section */}
