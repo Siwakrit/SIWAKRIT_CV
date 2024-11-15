@@ -5,12 +5,12 @@
 
     const Contact = () => {
     return (
-        <div className='flex flex-col md:flex-row justify-center mb-[5rem]
+        <div className='flex flex-col md:flex-row justify-center mb-[10rem]
          items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]'
         id='contact'>
       {/* Contact Info Section */}
         <div className='flex flex-col gap-5 md:w-1/2 items-center'>
-            <button className='bg-red-500 border border-red-500 rounded-md p-2 text-white font-bold w-32 md:w-40 text-center hover:bg-white hover:text-red-500'>
+            <button className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-32 md:w-40 text-center hover:bg-white hover:text-red-500'>
             Contact
             </button>
             <h1 className='text-2xl md:text-3xl font-bold hover:scale-110'>Get In Touch</h1>
@@ -54,7 +54,7 @@
                 <label htmlFor="Name" className='text-sm font-medium'>Name</label>
                 <input
                 type="text"
-                className='border border-slate-300 rounded-sm p-2 outline-cyan-500 hover:scale-105 transition-transform'
+                className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform'
                 placeholder='Your Name'
                 />
             </div>
@@ -63,7 +63,7 @@
                 <label htmlFor="Email" className='text-sm font-medium'>Email</label>
                 <input
                 type="email"
-                className='border border-slate-300 rounded-sm p-2 outline-cyan-500 hover:scale-105 transition-transform'
+                className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform'
                 placeholder='Your Email'
                 />
             </div>
@@ -74,7 +74,7 @@
             <label htmlFor="Subject" className='text-sm font-medium'>Subject</label>
             <input
                 type="text"
-                className='border border-slate-300 rounded-sm p-2 outline-cyan-500 hover:scale-105 transition-transform'
+                className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform'
                 placeholder='Subject'
             />
             </div>
@@ -83,7 +83,7 @@
             <div className='flex flex-col gap-2'>
             <label htmlFor="Message" className='text-sm font-medium'>Message</label>
             <textarea
-                className='border border-slate-300 rounded-sm p-2 outline-cyan-500 hover:scale-105 transition-transform resize-none 
+                className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform resize-none 
                 h-40 md:h-48'
                 placeholder='Message'
             ></textarea>
@@ -91,7 +91,7 @@
 
             {/* Submit Button */}
             <button
-            className='bg-red-500 border border-red-500 rounded-md p-2 text-white font-bold w-full md:w-40 text-center hover:bg-white hover:text-red-500 transition-colors'
+            className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-full md:w-40 text-center hover:bg-white hover:text-red-500 transition-colors'
             >
             Send Message
             </button>
