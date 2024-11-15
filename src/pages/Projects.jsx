@@ -14,7 +14,7 @@ const projects = [
     {
         id: 2,
         title: 'Project 2',
-        image: 'https://scontent.fbkk12-1.fna.fbcdn.net/v/t39.30808-6/453981323_1012735754187947_8387799742690492327_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rd9H__o0wPQQ7kNvgFFCuqn&_nc_zt=23&_nc_ht=scontent.fbkk12-1.fna&_nc_gid=AYnxlkUKodT8S6slI_J9DiE&oh=00_AYBTNHWQUKyck-M6t82-TZasw7kEZJMVhtRggy4qxiiJLw&oe=673A2CDB',
+        image: 'https://pbs.twimg.com/media/GKiT9ofbMAAM0in?format=jpg&name=large',
         description: 'Description of Project 2',
         category: 'Ecommerce',
         technologies: 'React, Node.js, MongoDB',
@@ -41,7 +41,7 @@ const projects = [
     {
         id: 5,
         title: 'Project 5',
-        image: 'https://scontent.fbkk12-1.fna.fbcdn.net/v/t39.30808-6/435133044_929490839179106_4924871872833359888_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=A5dHp0Src2QQ7kNvgGgTGym&_nc_zt=23&_nc_ht=scontent.fbkk12-1.fna&_nc_gid=AggDuFoUzCBybc5BZiyBNDE&oh=00_AYDDm5590HgmtjE27wc4yu6dZxtRkbzEJ9NN2DbddTiQHQ&oe=673A59B2',
+        image: 'https://pbs.twimg.com/media/GKiTwSMaUAAUSk9?format=jpg&name=large',
         description: 'Description of Project 5',
         category: 'Game',
         technologies: 'React, Node.js, MongoDB',
@@ -98,14 +98,14 @@ const Projects = () => {
     };
 
     return (
-        <div className="p-10 md:p-20 mb-[5rem]">
+        <div className="p-10 md:p-20 mb-[10rem]">
             <div className="flex justify-center">
                 <h1 className="text-3xl md:text-3xl font-bold
                 hover:scale-110 hover:text-red-500">My Projects</h1>
             </div>
 
 
-            <ul className="flex justify-center items-center gap-3 md:gap-5 p-5">
+            <ul className="flex justify-center items-center gap-3 md:gap-5 p-5 ">
                 <li className="font-bold hover:scale-110 hover:text-red-500">
                     <button onClick={() => handleCategoryChange('All')}>All</button>
                 </li>
@@ -121,15 +121,15 @@ const Projects = () => {
             </ul>
 
             {/* ใช้ <a> เพื่อทำให้การ์ดคลิกได้ */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-4 w-[100%] h-[80%]">
         
                 {filterProjects().map((project) => (
                     <a key={project.id} href={project.gitUrl} target="_blank" rel="noopener noreferrer" 
                     className="border border-red-500 rounded-md px-5 p-2 
                     hover:scale-105 hover:shadow-2xl hover:shadow-rose-600
                     h-auto w-auto block bg-red-500 text-white">
-                        <div className="flex justify-center">
-                            <img src={project.image} width={250} height={200} alt="" className="rounded-md hover:scale-110 hover:shadow-2xl hover:shadow-rose-600 object-cover" />
+                        <div className="flex justify-center w-[100%] h-[80%] ">
+                            <img src={project.image} width={250} height={200} alt="" className="rounded-md  hover:scale-110 hover:shadow-2xl hover:shadow-rose-600 object-cover" />
                         </div>
                         <div className="flex flex-col gap-2 pt-2 ">
                             <h1 className="text-xl font-bold hover:text-red-600">{project.title}</h1>
