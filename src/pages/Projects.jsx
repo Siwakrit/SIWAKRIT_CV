@@ -18,7 +18,7 @@ const projects = [
         description: 'Description of Project 2',
         category: 'Ecommerce',
         technologies: 'React, Node.js, MongoDB',
-        gitUrl: 'https://github.com/Siwakrit',
+        gitUrl: 'https://siwakrit-cv.vercel.app/',
     },
     {
         id: 3,
@@ -131,11 +131,8 @@ const Projects = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl max-h-[100%] mx-auto p-4 w-[100%] h-[100%]">
                 {visibleProjects.map((project) => (
-                    <a
+                    <div
                         key={project.id}
-                        href={project.gitUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="border border-red-500 rounded-md px-5 p-10 w-[100%] min-h-[350px] hover:scale-105 hover:shadow-2xl hover:shadow-rose-600 bg-red-500 text-white"
                     >
                         <div className="flex justify-center w-[100%] h-[80%] ">
@@ -151,8 +148,10 @@ const Projects = () => {
                             <h1 className="text-xl font-bold hover:text-red-600">{project.title}</h1>
                             <p className="text-sm flex-grow">{project.description}</p>
                             <p className="text-sm">Technologies used: {project.technologies}</p>
+                            <a className='text-sm underline hover:text-blue-700 text-blue-500 hover:shadow-2xl hover:shadow-blue-600 active:text-blue-800' 
+                            key={project.id} href={project.gitUrl} target="_blank" rel="noopener noreferrer">READ MORE</a>
                         </div>
-                    </a>
+                    </div>
                 ))}
             </div>
 
