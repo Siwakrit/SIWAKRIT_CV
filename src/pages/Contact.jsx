@@ -13,7 +13,7 @@
             <button className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-32 md:w-40 text-center hover:bg-white hover:text-red-500'>
             Contact
             </button>
-            <h1 className='text-2xl md:text-3xl font-bold hover:scale-110'>Get In Touch</h1>
+            <h1 className='text-2xl md:text-3xl font-bold hover:scale-110 hover:text-red-500 active:text-red-500'>Get In Touch</h1>
 
             {/* Phone Info */}
             <div className='pt-2'>
