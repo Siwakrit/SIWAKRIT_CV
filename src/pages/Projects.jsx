@@ -133,22 +133,21 @@ const Projects = () => {
                 {visibleProjects.map((project) => (
                     <div
                         key={project.id}
-                        className="border border-red-500 rounded-md px-5 p-10 w-[100%] min-h-[350px] hover:scale-105 hover:shadow-2xl hover:shadow-rose-600 bg-red-500 text-white"
+                        className="border border-red-500 rounded-md px-5 p-10 w-[100%] min-h-[fit] 
+                        hover:scale-105 hover:shadow-2xl hover:shadow-rose-600 bg-red-500 text-white"
                     >
-                        <div className="flex justify-center w-[100%] h-[80%] ">
+                        <div className="flex justify-center w-[100%] h-[fit]">
                             <img
                                 src={project.image}
-                                width={250}
-                                height={200}
                                 alt=""
-                                className="rounded-md hover:scale-110 hover:shadow-2xl hover:shadow-rose-600 object-cover h-[350px] w-full"
+                                className="rounded-md hover:scale-110 hover:shadow-2xl hover:shadow-rose-600 object-cover h-[450px] w-full"
                             />
                         </div>
-                        <div className="flex flex-col gap-2 md:pt-2 p-2">
+                        <div className="flex flex-col gap-2 pt-[2rem] p-2 ">
                             <h1 className="text-xl font-bold hover:text-red-600">{project.title}</h1>
                             <p className="text-sm flex-grow">{project.description}</p>
-                            <p className="text-sm">Technologies used: {project.technologies}</p>
-                            <a className='text-sm underline hover:text-blue-700 text-blue-500 hover:shadow-2xl hover:shadow-blue-600 active:text-blue-800' 
+                            <p className="text-sm flex-grow">Technologies used: {project.technologies}</p>
+                            <a className='text-sm flex-grow underline hover:text-blue-700 text-blue-500 hover:shadow-2xl hover:shadow-blue-600 active:text-blue-800' 
                             key={project.id} href={project.gitUrl} target="_blank" rel="noopener noreferrer">READ MORE</a>
                         </div>
                     </div>

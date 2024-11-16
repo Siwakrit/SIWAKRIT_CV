@@ -7,12 +7,12 @@ const Footer = () => {
     border-t-[#7f8188]  border-t md:mt-[5rem]'>
         <ul>
             <li>
-            <WiAlien className='hover:scale-110 hover:text-orange-500' size={60} />
+            <WiAlien className='hover:scale-110 hover:text-red-500' size={60} />
             </li>
         </ul>
 
         <ul>
-            <li className='text-sm hover:text-orange-500 hover:scale-110'>© 2024 Siwakrit Pattaveesin</li> 
+            <li className='text-sm'>© 2024 Siwakrit Pattaveesin</li> 
         </ul>
     </div>
   )
