@@ -22,12 +22,12 @@ const Hero = () => {
           I am excited to work with others to create amazing applications.
         </p>
         <a
-          href='/SIWAKRIT_CV.pdf'
-          download
+          href='/SIWAKRIT_CV.pdf' // ตั้งค่า href เพื่อชี้ไปยังไฟล์ PDF
+          download // ใช้คุณสมบัติ download เพื่อให้ไฟล์ถูกดาวน์โหลดเมื่อคลิก
           className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-40 text-center hover:bg-white hover:text-red-500 transition-colors'
-          onClick={(e) => {
-            if (!e.currentTarget.href) {
-              e.preventDefault();
+          onClick={(e) => { // การทำงานเมื่อคลิก
+            if (!e.currentTarget.href) { // ตรวจสอบว่า href ของลิงก์ไม่ว่างหรือไม่
+              e.preventDefault(); // หยุดการทำงานของลิงก์
               console.error('Download link is missing or invalid.');
             }
           }}
