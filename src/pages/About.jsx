@@ -41,12 +41,15 @@ const tabs = [
 ];
 
 const About = () => {
+    // สถานะของแท็บที่เลือกในขณะนี้ (เริ่มต้นที่ 'skills')
   const [selectedTab, setSelectedTab] = useState("skills");
+  // useTransition ใช้สำหรับการจัดการสถานะที่ต้องใช้เวลาในการโหลด (เช่น การเปลี่ยนแท็บ)
   const [isPending, setIsPending] = useTransition();
 
+    // ฟังก์ชันที่ใช้เปลี่ยนแท็บเมื่อผู้ใช้คลิก
   const handleTabChange = (id) => {
     setIsPending(() => {
-      setSelectedTab(id);
+      setSelectedTab(id);// อัปเดตสถานะของแท็บที่เลือก
     });
   };
 
@@ -73,7 +76,7 @@ const About = () => {
             {tabs.map(({ id, title }) => (
               <button
                 key={id}
-                onClick={() => handleTabChange(id)}
+                onClick={() => handleTabChange(id)}// เมื่อคลิกปุ่มจะเปลี่ยนแท็บ
                 className={selectedTab === id ? "bg-red-500 rounded-sm text-white p-2 font-bold hover:underline hover:text-white hover:bg-red-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-600 hover:font-bold active:bg-red-600 active:scale-90" : ""}
               >
                 {title}
@@ -81,6 +84,7 @@ const About = () => {
             ))}
           </div>
           <div className="mt-8">
+            {/* การแสดงเนื้อหาของแท็บที่เลือก */}
             {tabs.find((tab) => tab.id === selectedTab)?.content}
           </div>
         </div>

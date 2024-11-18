@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-
+// กำหนดข้อมูลโปรเจกต์ทั้งหมดใน array
 const projects = [
     {
         id: 1,
@@ -86,33 +86,35 @@ const projects = [
 ];
 
 const Projects = () => {
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [visibleProjectsCount, setVisibleProjectsCount] = useState(3);
+    // สร้าง state สำหรับเลือก category และจำนวนโปรเจกต์ที่จะแสดง
+    const [selectedCategory, setSelectedCategory] = useState('All');// เริ่มต้นให้เลือกทั้งหมด
+    const [visibleProjectsCount, setVisibleProjectsCount] = useState(3);// เริ่มต้นให้แสดง 3 โปรเจกต์
 
-    // Function to filter projects based on the selected category
+    // ฟังก์ชันสำหรับกรองโปรเจกต์ตาม category ที่เลือก
     const filterProjects = () => {
         if (selectedCategory === 'All') {
-            return projects;
+            return projects;// หากเลือกทั้งหมดให้แสดงทุกโปรเจกต์
         }
-        return projects.filter((project) => project.category === selectedCategory);
+        return projects.filter((project) => project.category === selectedCategory);// กรองตาม category
     };
 
-    // Get the filtered projects based on the category
+    // รับโปรเจกต์ที่กรองแล้วตาม category
     const filteredProjects = filterProjects();
 
-    // Projects to display based on the visible count
+    // แสดงโปรเจกต์ตามจำนวนที่กำหนด
     const visibleProjects = filteredProjects.slice(0, visibleProjectsCount);
 
-    // Check if there are more projects to show
+    // เช็คว่ามีโปรเจกต์เหลือให้แสดงหรือไม่
     const hasMoreProjects = visibleProjectsCount < filteredProjects.length;
 
+// ฟังก์ชันสำหรับแสดงโปรเจกต์เพิ่มเมื่อกด "See more"
     const handleSeeMore = () => {
         setVisibleProjectsCount((prevCount) => prevCount + 3);
     };
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
-        setVisibleProjectsCount(3); // Reset count when category changes
+        setVisibleProjectsCount(3); // รีเซ็ตจำนวนโปรเจกต์ที่จะแสดงเมื่อเปลี่ยน category 
     };
 
     return (
