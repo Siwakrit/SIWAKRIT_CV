@@ -22,9 +22,15 @@ const Hero = () => {
           I am excited to work with others to create amazing applications.
         </p>
         <a
-          href=''
-          download='CV.pdf'
+          href='/SIWAKRIT_CV.pdf'
+          download
           className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-40 text-center hover:bg-white hover:text-red-500 transition-colors'
+          onClick={(e) => {
+            if (!e.currentTarget.href) {
+              e.preventDefault();
+              console.error('Download link is missing or invalid.');
+            }
+          }}
         >
           Download CV
         </a>
