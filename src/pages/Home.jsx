@@ -14,12 +14,9 @@ const Hero = () => {
           I&apos;m a full stack web developer
         </h1>
         <p className='hover:scale-105 hover:text-red-500 transition-transform'>
-          I&apos;m a full stack web developer with a passion for creating
-          interactive and responsive web applications. I have experience
-          working with JavaScript, React, Node.js, Express, TailwindCSS,
-          MongoDB, HTML, CSS, and Git. I am a quick learner and I am always
-          looking to expand my knowledge and skill set. I am a team player and
-          I am excited to work with others to create amazing applications.
+        Completed Generation Thailand's Junior Software Developer Bootcamp (Cohort 8). With 1 year and 7 months of experience as an IT Project Coordinator (Chinese Skills Hsk5) and a 4-year degree in Education of Chinese Language from China, I have developed strong communication, teamwork, adaptability, management, and problem-solving skills. 
+            Proficient in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. Seeking a Software Developer position where I can contribute to a company that values achievement, motivation, and teamwork
+
         </p>
         <a
           href='/SIWAKRIT_CV.pdf' // ตั้งค่า href เพื่อชี้ไปยังไฟล์ PDF
