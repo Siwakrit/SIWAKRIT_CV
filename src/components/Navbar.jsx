@@ -19,24 +19,24 @@ const Navbar = () => {
     return (
         <div className='flex justify-between items-center gap-2 md:p-3 mb-[2rem] shadow-md w-[100%]'>
 
-                {/* โลโก้ */}
-                <ul>
-                    <li>
-                        {toggle === false ? (
-                            <img src="Img/CS.png" alt="Web Logo" 
-                                className='hover:scale-110 hover:text-orange-500' 
-                                width={80} height={50}
-                                onClick={handleToggle}
-                            />
-                        ) : (
-                            <img src="Img/95.png" alt="Web Logo" 
-                                className='hover:scale-110 hover:text-orange-500' 
-                                width={80} height={50}
-                                onClick={handleToggle}
-                            />
-                        )}
-                    </li>
-                </ul>
+            {/* โลโก้ */}
+            <ul>
+                <li>
+                    {toggle === false ? (
+                        <img src="Img/CS.png" alt="Web Logo"
+                            className='hover:scale-110 hover:text-orange-500'
+                            width={80} height={50}
+                            onClick={handleToggle}
+                        />
+                    ) : (
+                        <img src="Img/95.png" alt="Web Logo"
+                            className='hover:scale-110 hover:text-orange-500'
+                            width={80} height={50}
+                            onClick={handleToggle}
+                        />
+                    )}
+                </li>
+            </ul>
 
             {/* เมนูบนเดสก์ท็อป */}
             <ul className='hidden sm:flex justify-center items-center gap-2 text-white'>

@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className='flex flex-col h-screen mb-[2rem]
     w-[100%] md:flex-row p-10 md:p-20 gap-10'
-    id='home'>
+      id='home'>
       {/* Left section with text */}
       <div className='flex flex-col gap-5 md:justify-center w-full md:w-1/2'>
         <p className='text-2xl font-bold hover:scale-110 hover:text-red-500 hover:underline transition-transform'>

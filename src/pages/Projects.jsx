@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 const projects = [
     {
         id: 1,
-        title: 'Project 1',
-        image: 'Img/SKB_7890.jpg',
-        description: 'Description of Project 1',
-        category: 'Form',
-        technologies: 'React, Node.js, MongoDB',
-        gitUrl: 'https://github.com/Siwakrit',
+        title: 'Project 1 - E-Commerce Business Game',
+        image: '/Img/Project1.png',
+        description: 'Ecommerce project with a team of 4 members, utilizing Scrum and Agile methodologies.',
+        category: 'Ecommerce',
+        technologies: 'MERN Stack',
+        gitUrl: 'https://project-group7-frontend.vercel.app',
     },
     {
         id: 2,
@@ -51,64 +51,64 @@ const projects = [
         id: 6,
         title: 'Project 6',
         image: 'https://pbs.twimg.com/media/Gc5jd9WaAAQSQjy?format=jpg&name=medium',
-        description: 'Description of Project 6', 
-        category: 'Game', 
-        technologies: 'React, Node.js, MongoDB', 
-        gitUrl: 'https://github.com/Siwakrit', 
+        description: 'Description of Project 6',
+        category: 'Game',
+        technologies: 'React, Node.js, MongoDB',
+        gitUrl: 'https://github.com/Siwakrit',
     },
     {
         id: 7,
         title: 'Project 7',
         image: 'https://pbs.twimg.com/media/GcdaqJkWsAE_Kh4?format=jpg&name=large',
-        description: 'Description of Project 7', 
-        category: 'Ecommerce', 
-        technologies: 'React, Node.js, MongoDB', 
-        gitUrl: 'https://github.com/Siwakrit', 
+        description: 'Description of Project 7',
+        category: 'Ecommerce',
+        technologies: 'React, Node.js, MongoDB',
+        gitUrl: 'https://github.com/Siwakrit',
     },
     {
         id: 8,
         title: 'Project 8',
         image: 'https://pbs.twimg.com/media/GcdaqJjWUAAALHg?format=jpg&name=large',
-        description: 'Description of Project 8', 
-        category: 'Ecommerce', 
-        technologies: 'React, Node.js, MongoDB', 
-        gitUrl: 'https://github.com/Siwakrit', 
+        description: 'Description of Project 8',
+        category: 'Ecommerce',
+        technologies: 'React, Node.js, MongoDB',
+        gitUrl: 'https://github.com/Siwakrit',
     },
     {
         id: 9,
         title: 'Project 9',
         image: 'https://pbs.twimg.com/media/GZoabiSWQAUI97V?format=jpg&name=large',
-        description: 'Fontend Ecommerce', 
-        category: 'Ecommerce', 
-        technologies: 'React, Node.js, TailwindCSS', 
-        gitUrl: 'https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git', 
+        description: 'Fontend Ecommerce',
+        category: 'Ecommerce',
+        technologies: 'React, Node.js, TailwindCSS',
+        gitUrl: 'https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git',
     },
     {
         id: 10,
         title: 'Project 10',
         image: 'https://pbs.twimg.com/media/GV0rAoSbIAAOtQd?format=jpg&name=medium',
-        description: 'Fontend Ecommerce', 
-        category: 'Form', 
-        technologies: 'React, Node.js, TailwindCSS', 
-        gitUrl: 'https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git', 
+        description: 'Fontend Ecommerce',
+        category: 'Form',
+        technologies: 'React, Node.js, TailwindCSS',
+        gitUrl: 'https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git',
     },
     {
         id: 11,
         title: 'Project 11',
         image: 'https://pbs.twimg.com/media/GUsm9PCW4AAbZGt?format=jpg&name=medium',
-        description: 'Fontend Ecommerce', 
-        category: 'Form', 
-        technologies: 'React, Node.js, TailwindCSS', 
-        gitUrl: 'https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git', 
+        description: 'Fontend Ecommerce',
+        category: 'Form',
+        technologies: 'React, Node.js, TailwindCSS',
+        gitUrl: 'https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git',
     },
     {
         id: 12,
         title: 'Project 12',
         image: 'https://pbs.twimg.com/media/GeXBmI7XYAALQUJ?format=jpg&name=medium',
-        description: 'Fontend Ecommerce', 
-        category: 'Form', 
-        technologies: 'React, Node.js, TailwindCSS', 
-        gitUrl: 'https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git', 
+        description: 'Fontend Ecommerce',
+        category: 'Form',
+        technologies: 'React, Node.js, TailwindCSS',
+        gitUrl: 'https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git',
     },
 ];
 
@@ -134,7 +134,7 @@ const Projects = () => {
     // เช็คว่ามีโปรเจกต์เหลือให้แสดงหรือไม่
     const hasMoreProjects = visibleProjectsCount < filteredProjects.length;
 
-// ฟังก์ชันสำหรับแสดงโปรเจกต์เพิ่มเมื่อกด "See more"
+    // ฟังก์ชันสำหรับแสดงโปรเจกต์เพิ่มเมื่อกด "See more"
     const handleSeeMore = () => {
         setVisibleProjectsCount((prevCount) => prevCount + 3);
     };
@@ -185,8 +185,8 @@ const Projects = () => {
                             <h1 className="text-xl font-bold hover:text-red-600">{project.title}</h1>
                             <p className="text-sm flex-grow">{project.description}</p>
                             <p className="text-sm flex-grow">Technologies used: {project.technologies}</p>
-                            <a className='text-sm flex-grow underline hover:text-blue-700 text-blue-500 hover:shadow-2xl hover:shadow-blue-600 active:text-blue-800' 
-                            key={project.id} href={project.gitUrl} target="_blank" rel="noopener noreferrer">READ MORE</a>
+                            <a className='text-sm flex-grow underline hover:text-blue-700 text-blue-500 hover:shadow-2xl hover:shadow-blue-600 active:text-blue-800'
+                                key={project.id} href={project.gitUrl} target="_blank" rel="noopener noreferrer">READ MORE</a>
                         </div>
                     </div>
                 ))}
@@ -194,8 +194,8 @@ const Projects = () => {
 
             {hasMoreProjects && (
                 <div className='flex justify-center pt-5'>
-                    <button 
-                        onClick={handleSeeMore} 
+                    <button
+                        onClick={handleSeeMore}
                         className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded hover:scale-110 hover:shadow-2xl hover:shadow-rose-600 hover:text-white active:bg-red-800 active:text-white'>
                         See more
                     </button>
