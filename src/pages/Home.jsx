@@ -5,13 +5,13 @@ const Hero = () => {
     <div className='flex flex-col h-screen mb-[28rem] w-[100%] md:flex-row p-10 md:p-20 gap-10' id='home'>
       {/* Left section with text */}
       <div className='flex flex-col gap-5 md:justify-center w-full md:w-1/2'>
-        <p className='text-2xl font-bold hover:scale-110 hover:text-red-500 hover:underline transition-transform'>
+        <p className='text-2xl font-bold hover:scale-110'>
           Hello, I&apos;m Fronk
         </p>
-        <h1 className='text-3xl md:text-4xl font-bold hover:scale-110 hover:text-red-500 hover:underline transition-transform'>
+        <h1 className='text-3xl md:text-4xl font-bold'>
           I&apos;m a full stack web developer
         </h1>
-        <p className='hover:scale-105 hover:text-red-500 transition-transform'>
+        <p className='hover:scale-105'>
           Completed Generation Thailand's Junior Software Developer Bootcamp (Cohort 8). With 1 year and 7 months of experience as an IT Project Coordinator (Chinese Skills Hsk5) and a 4-year degree in Education of Chinese Language from China, I have developed strong communication, teamwork, adaptability, management, and problem-solving skills.
           Proficient in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. Seeking a Software Developer position where I can contribute to a company that values achievement, motivation, and teamwork
         </p>

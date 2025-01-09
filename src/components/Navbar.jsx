@@ -41,13 +41,13 @@ const Navbar = () => {
 
             {/* เมนูบนเดสก์ท็อป */}
             <ul className='hidden sm:flex justify-center items-center gap-2 text-white'>
-                <li className='font-bold bg-blue-600 border border-blue-600 rounded-md p-2 hover:bg-white hover:text-blue-600'>
+                <li className='font-bold bg-blue-500 border border-blue-500 rounded-md p-2 hover:bg-white hover:text-blue-500'>
                     <a href="#home">Home</a>
                 </li>
-                <li className='font-bold bg-blue-600 border border-blue-600 rounded-md p-2 hover:bg-white hover:text-blue-600'>
+                <li className='font-bold bg-red-500 border border-red-500 rounded-md p-2 hover:bg-white hover:text-red-500'>
                     <a href="#contact">Contact</a>
                 </li>
-                <li className='font-bold bg-blue-600 border border-blue-600 rounded-md p-2 hover:bg-white hover:text-blue-600'>
+                <li className='font-bold bg-rose-400 border border-rose-400 rounded-md p-2 hover:bg-white hover:text-rose-400'>
                     <a href="#about">About</a>
                 </li>
             </ul>
