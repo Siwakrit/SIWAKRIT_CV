@@ -21,7 +21,7 @@ const Contact = () => {
                         <FaPhoneVolume className='hover:scale-110' />
                         <div>
                             <p className='font-bold hover:scale-110'>Phone</p>
-                            <p className='hover:scale-110'>+66 91 035 7830</p>
+                            <p className='hover:scale-110'>+66 95 294 1698</p>
                         </div>
                     </div>
 
