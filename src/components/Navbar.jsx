@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaFacebook, FaSun, FaMoon } from "react-icons/fa";
+import { useDarkMode } from '../context/DarkModeContext'; // นำเข้า useDarkMode จาก context
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false); // สร้าง state เพื่อควบคุมการสลับโลโก้
     const [menuOpen, setMenuOpen] = useState(false); // สร้าง state สำหรับเปิดปิดเมนูบนมือถือ
+
+    // ดึงค่า darkMode และ toggleDarkMode จาก context
+    const { darkMode, toggleDarkMode } = useDarkMode();
 
     const handleToggle = () => {
         setToggle(!toggle); // สลับค่าโลโก้
@@ -17,8 +19,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className='flex justify-between items-center gap-2 md:p-3 mb-[2rem] shadow-md w-[100%]'>
-
+        <div className='flex justify-between items-center gap-2 md:p-3  shadow-md w-[100%]'>
             {/* โลโก้ */}
             <ul>
                 <li>
@@ -54,7 +55,7 @@ const Navbar = () => {
             {/* เมนูบนมือถือ */}
             <div className="sm:hidden flex items-center">
                 {/* ปุ่ม Hamburger Menu */}
-                <button onClick={handleMenuToggle} className="text-black text-3xl">
+                <button onClick={handleMenuToggle} className="text-3xl">
                     {menuOpen ? "✖️" : "☰"}
                 </button>
 
@@ -92,6 +93,10 @@ const Navbar = () => {
                     <Link to="https://www.linkedin.com/in/siwakrit-pattaveesin/" target='_blank'>
                         <FaLinkedinIn className='hover:scale-110 hover:text-blue-800' size={40} />
                     </Link>
+                </li>
+                {/* ปุ่มสลับโหมด */}
+                <li onClick={toggleDarkMode} className='cursor-pointer'>
+                    {darkMode ? <FaSun className="text-yellow-500" size={30} /> : <FaMoon className="text-black-500" size={30} />}
                 </li>
             </ul>
         </div>

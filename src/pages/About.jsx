@@ -12,7 +12,7 @@ const tabs = [
         <li>React</li>
         <li>Node.js</li>
         <li>Express</li>
-        <li>Reletional Database</li>
+        <li>Relational Database</li>
         <li>MongoDB</li>
       </ul>
     ),
@@ -45,25 +45,25 @@ const About = () => {
   const [selectedTab, setSelectedTab] = useState("skills");
   // useTransition ใช้สำหรับการจัดการสถานะที่ต้องใช้เวลาในการโหลด (เช่น การเปลี่ยนแท็บ)
   const [isPending, setIsPending] = useTransition();
-
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  
   // ฟังก์ชันที่ใช้เปลี่ยนแท็บเมื่อผู้ใช้คลิก
   const handleTabChange = (id) => {
     setIsPending(() => {
-      setSelectedTab(id);// อัปเดตสถานะของแท็บที่เลือก
+      setSelectedTab(id); // อัปเดตสถานะของแท็บที่เลือก
     });
   };
 
   return (
-    <section className="text-black w-[100%] mb-[5rem] mt-[2rem]" id="about">
+    <section className="w-full mb-20 mt-[5rem]" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="flex justify-center items-center">
           <img src="/Img/Profile0.jpg"
-            className="rounded-xl md:rounded-3xl hover:scale-110 
-        transition-transform hover:shadow-2xl hover:shadow-red-600"
+            className="rounded-xl md:rounded-3xl hover:scale-110 transition-transform hover:shadow-2xl hover:shadow-red-600"
             width={500} height={500} alt="aboutimg" />
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-black mb-4 hover:scale-110 hover:text-red-500">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 hover:scale-110 hover:text-red-500">About Me</h2>
           <p className="text-base lg:text-lg hover:scale-105 hover:text-red-500">
             Completed Generation Thailand's Junior Software Developer Bootcamp (Cohort 8). With 1 year and 7 months of experience as an IT Project Coordinator (Chinese Skills Hsk5) and a 4-year degree in Education of Chinese Language from China, I have developed strong communication, teamwork, adaptability, management, and problem-solving skills.
             Proficient in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. Seeking a Software Developer position where I can contribute to a company that values achievement, motivation, and teamwork
@@ -72,8 +72,11 @@ const About = () => {
             {tabs.map(({ id, title }) => (
               <button
                 key={id}
-                onClick={() => handleTabChange(id)}// เมื่อคลิกปุ่มจะเปลี่ยนแท็บ
-                className={selectedTab === id ? "bg-red-500 rounded-sm text-white p-2 font-bold hover:underline hover:text-white hover:bg-red-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-600 hover:font-bold active:bg-red-600 active:scale-90" : ""}
+                onClick={() => handleTabChange(id)}
+                className={`${selectedTab === id
+                    ? "bg-red-500 text-white"
+                    : "text-black dark:text-white dark:bg-gray-800"
+                  } p-2 font-bold hover:underline hover:text-white hover:bg-red-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-600 active:bg-red-600 active:scale-90 rounded-sm`}
               >
                 {title}
               </button>
@@ -90,5 +93,3 @@ const About = () => {
 };
 
 export default About;
-
-
