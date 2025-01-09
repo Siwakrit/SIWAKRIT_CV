@@ -45,8 +45,7 @@ const About = () => {
   const [selectedTab, setSelectedTab] = useState("skills");
   // useTransition ใช้สำหรับการจัดการสถานะที่ต้องใช้เวลาในการโหลด (เช่น การเปลี่ยนแท็บ)
   const [isPending, setIsPending] = useTransition();
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  
+
   // ฟังก์ชันที่ใช้เปลี่ยนแท็บเมื่อผู้ใช้คลิก
   const handleTabChange = (id) => {
     setIsPending(() => {
@@ -65,8 +64,12 @@ const About = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Completed Generation Thailand's Junior Software Developer Bootcamp (Cohort 8). With 1 year and 7 months of experience as an IT Project Coordinator (Chinese Skills Hsk5) and a 4-year degree in Education of Chinese Language from China, I have developed strong communication, teamwork, adaptability, management, and problem-solving skills.
-            Proficient in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. Seeking a Software Developer position where I can contribute to a company that values achievement, motivation, and teamwork
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Completed Generation Thailand&apos;s Junior Software Developer Bootcamp (Cohort 8).
+            With 1 year and 7 months of experience as an IT Project Coordinator (Chinese Skills Hsk5)
+            and a 4-year degree in Education of Chinese Language from China,
+            I have developed strong communication, teamwork, adaptability, management, and problem-solving skills. <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proficient in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB.
+            I am eager to contribute my skills and expertise to a company that values a growth mindset, achievement, motivation, and teamwork.
           </p>
           <div className="flex flex-row justify-start mt-8 gap-2">
             {tabs.map(({ id, title }) => (
@@ -74,8 +77,8 @@ const About = () => {
                 key={id}
                 onClick={() => handleTabChange(id)}
                 className={`${selectedTab === id
-                    ? "bg-red-500 text-white"
-                    : "text-black dark:text-white dark:bg-gray-800"
+                  ? "bg-red-500 text-white"
+                  : "text-black dark:text-white dark:bg-gray-800"
                   } p-2 font-bold hover:underline hover:text-white hover:bg-red-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-600 active:bg-red-600 active:scale-90 rounded-sm`}
               >
                 {title}

@@ -12,7 +12,7 @@ const Hero = () => {
           I&apos;m a full stack web developer
         </h1>
         <p className='hover:scale-105'>
-          I&apos;m a full stack web developer with a passion for creating
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&apos;m a full stack web developer with a passion for creating
           exceptional digital experiences. With a strong foundation in HTML,
           CSS, JavaScript, React, Node.js, Express, relational databases, and
           MongoDB. I open to job opportunities where I can contribute to a
