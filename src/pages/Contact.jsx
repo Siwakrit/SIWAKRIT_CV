@@ -54,7 +54,7 @@ const Contact = () => {
                         <label htmlFor="Name" className='text-sm font-medium'>Name</label>
                         <input
                             type="text"
-                            className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform'
+                            className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
                             placeholder='Your Name'
                         />
                     </div>
@@ -63,7 +63,7 @@ const Contact = () => {
                         <label htmlFor="Email" className='text-sm font-medium'>Email</label>
                         <input
                             type="email"
-                            className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform'
+                            className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
                             placeholder='Your Email'
                         />
                     </div>
@@ -74,7 +74,7 @@ const Contact = () => {
                     <label htmlFor="Subject" className='text-sm font-medium'>Subject</label>
                     <input
                         type="text"
-                        className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform'
+                        className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
                         placeholder='Subject'
                     />
                 </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                 <div className='flex flex-col gap-2'>
                     <label htmlFor="Message" className='text-sm font-medium'>Message</label>
                     <textarea
-                        className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform resize-none 
+                        className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform resize-none text-black
                 h-40 md:h-48'
                         placeholder='Message'
                     ></textarea>
