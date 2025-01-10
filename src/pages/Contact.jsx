@@ -16,7 +16,7 @@ const Contact = () => {
             {/* Contact Info Section */}
             <div className='flex flex-col gap-5 md:w-1/2 items-center'>
                 <button className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-32 md:w-40 text-center hover:bg-white hover:text-red-500'>
-                    Contact
+                    {text.contactMe}
                 </button>
                 <h1 className='text-2xl md:text-3xl font-bold hover:scale-110 hover:text-red-500 active:text-red-500'>{text.title}</h1>
 
@@ -60,7 +60,7 @@ const Contact = () => {
                         <input
                             type="text"
                             className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
-                            placeholder='Your Name'
+                            placeholder={text.placeholderName}
                         />
                     </div>
 
@@ -69,7 +69,7 @@ const Contact = () => {
                         <input
                             type="email"
                             className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
-                            placeholder='Your Email'
+                            placeholder={text.placeholderEmail}
                         />
                     </div>
                 </div>
@@ -80,7 +80,7 @@ const Contact = () => {
                     <input
                         type="text"
                         className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
-                        placeholder='Subject'
+                        placeholder={text.placeholderSubject}
                     />
                 </div>
 
@@ -90,7 +90,7 @@ const Contact = () => {
                     <textarea
                         className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform resize-none text-black
                 h-40 md:h-48'
-                        placeholder='Message'
+                        placeholder={text.placeholderMessage}
                     ></textarea>
                 </div>
 
