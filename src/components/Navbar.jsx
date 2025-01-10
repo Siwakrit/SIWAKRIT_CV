@@ -71,7 +71,9 @@ const Navbar = () => {
                 </select>
             </ul>
 
-            {/* เมนูบนมือถือ */}
+            {/* ลิงก์ไอคอนโซเชียล */}
+            <ul className='flex gap-3'>
+                            {/* เมนูบนมือถือ */}
             <div className="sm:hidden flex items-center">
                 {/* ปุ่ม Hamburger Menu */}
                 <button onClick={handleMenuToggle} className="text-3xl">
@@ -80,15 +82,15 @@ const Navbar = () => {
 
                 {/* เมนูที่เปิด/ปิดในมือถือ */}
                 {menuOpen && (
-                    <div className="absolute top-16 right-0 bg-blue-600 text-white w-[200px] p-4 rounded-md shadow-lg">
+                    <div className="font-bold bg-neutral-800 border border-neutral-800 rounded-md p-2 ">
                         <ul>
-                            <li className='font-bold p-2 hover:bg-white hover:text-blue-600'>
+                            <li className='font-bold bg-blue-500 border border-blue-500 rounded-md p-2 hover:bg-white hover:text-blue-500'>
                                 <a href="#home">Home</a>
                             </li>
-                            <li className='font-bold p-2 hover:bg-white hover:text-blue-600'>
+                            <li className='font-bold bg-red-500 border border-red-500 rounded-md p-2 hover:bg-white hover:text-red-500'>
                                 <a href="#contact">Contact</a>
                             </li>
-                            <li className='font-bold p-2 hover:bg-white hover:text-blue-600'>
+                            <li className='font-bold bg-rose-400 border border-rose-400 rounded-md p-2 hover:bg-white hover:text-rose-400'>
                                 <a href="#about">About</a>
                             </li>
                             <select
@@ -104,9 +106,6 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-
-            {/* ลิงก์ไอคอนโซเชียล */}
-            <ul className='flex gap-3'>
                 <li>
                     <Link to="https://github.com/Siwakrit" target='_blank'>
                         <FaGithub className='hover:scale-110 hover:text-red-500' size={40} />
