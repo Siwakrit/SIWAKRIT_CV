@@ -6,8 +6,6 @@ import { useLanguage } from "../context/LanguageContext"; // ใช้ useLangua
 import translations from "../context/translations";
 
 
-
-
 const Navbar = () => {
     const [toggle, setToggle] = useState(false); // สร้าง state เพื่อควบคุมการสลับโลโก้
     const [menuOpen, setMenuOpen] = useState(false); // สร้าง state สำหรับเปิดปิดเมนูบนมือถือ
@@ -32,13 +30,13 @@ const Navbar = () => {
                 <li>
                     {toggle === false ? (
                         <img src="Img/CS.png" alt="Web Logo"
-                            className='hover:scale-110 hover:text-orange-500'
+                            className='hover:scale-110 hover:text-orange-500 animate-pulse'
                             width={80} height={50}
                             onClick={handleToggle}
                         />
                     ) : (
                         <img src="Img/95.png" alt="Web Logo"
-                            className='hover:scale-110 hover:text-orange-500'
+                            className='hover:scale-110 hover:text-orange-500 animate-pulse'
                             width={80} height={50}
                             onClick={handleToggle}
                         />
