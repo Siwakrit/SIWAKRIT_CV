@@ -40,7 +40,7 @@ const About = () => {
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{text.aboutMeTitle}</h2>
-          <p className="text-base lg:text-lg">{text.aboutMeDescription}</p>
+          <div className="text-base lg:text-lg" dangerouslySetInnerHTML={{ __html: text.aboutMeDescription.replace(/\n/g, "<br/>") }} />
           <div className="flex flex-row justify-start mt-8 gap-2">
             {tabs.map(({ id, title }) => (
               <button

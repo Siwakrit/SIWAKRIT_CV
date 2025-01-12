@@ -8,15 +8,11 @@ const translations = {
         greeting: "Hello, I'm Fronk",
         jobTitle: "I'm a full stack web developer",
         description:
-            "I'm a full stack web developer with a passion for creating exceptional digital experiences. With a strong foundation in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. I am open to job opportunities where I can contribute to a company that values achievement, motivation, and teamwork.",
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm a full stack web developer with a passion for creating exceptional digital experiences. With a strong foundation in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. I am open to job opportunities where I can contribute to a company that values achievement, motivation, and teamwork.",
         downloadCV: "Download CV",
         aboutMeTitle: "About Me",
-        aboutMeDescription: `Completed Generation Thailand's Junior Software Developer Bootcamp (Cohort 8).
-      With 1 year and 7 months of experience as an IT Project Coordinator (Chinese Skills HSK5)
-      and a 4-year degree in Education of Chinese Language from China,
-      I have developed strong communication, teamwork, adaptability, management, and problem-solving skills.
-      Proficient in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB.
-      I am eager to contribute my skills and expertise to a company that values a growth mindset, achievement, motivation, and teamwork.`,
+        aboutMeDescription: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Completed Generation Thailand's Junior Software Developer Bootcamp (Cohort 8). With 1 year and 7 months of experience as an IT Project Coordinator (Chinese Skills HSK5) and a 4-year degree in Education of Chinese Language from China, I have developed strong communication, teamwork, adaptability, management, and problem-solving skills.
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proficient in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. I am eager to contribute my skills and expertise to a company that values a growth mindset, achievement, motivation, and teamwork.`,
         tabs: {
             skills: {
                 title: "Skills",
@@ -58,7 +54,7 @@ const translations = {
                 image: '/Img/Project1.png',
                 description: 'Ecommerce project with a team of 4 members, utilizing Scrum and Agile methodologies.',
                 category: 'Ecommerce',
-                technologies: 'MERN Stack',
+                technologies: 'MERN STACK',
                 gitUrl: 'https://project-group7-frontend.vercel.app',
             },
             {
@@ -74,10 +70,10 @@ const translations = {
                 id: 3,
                 title: 'Project 3',
                 image: 'https://pbs.twimg.com/media/Gb0zZPWXcAYhExO?format=jpg&name=large',
-                description: 'Description of Project 3',
-                category: 'Game',
-                technologies: 'React, Node.js, MongoDB',
-                gitUrl: 'https://github.com/Siwakrit',
+                description: '30 JavaScript Projects',
+                category: 'All',
+                technologies: 'HTML, CSS, JavaScript',
+                gitUrl: 'https://github.com/Siwakrit/30-JavaScript.git',
             },
             {
                 id: 4,
@@ -187,14 +183,10 @@ const translations = {
         greeting: "สวัสดี, ผมชื่อฟร้อง",
         jobTitle: "ผมเป็นนักพัฒนาเว็บ Full Stack",
         description:
-            "ผมเป็นนักพัฒนาเว็บ Full Stack ที่มีความหลงใหลในสร้างประสบการณ์ดิจิทัลที่ยอดเยี่ยม ด้วยความเชี่ยวชาญใน HTML, CSS, JavaScript, React, Node.js, Express, ฐานข้อมูลเชิงสัมพันธ์ และ MongoDB ผมเปิดรับโอกาสงานที่สามารถช่วยพัฒนาบริษัทที่ให้ความสำคัญกับความสำเร็จ แรงจูงใจ และการทำงานเป็นทีม",
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ผมเป็นนักพัฒนาเว็บ Full Stack ที่มีความหลงใหลในการสร้างประสบการณ์ดิจิทัลที่ยอดเยี่ยม ด้วยความเชี่ยวชาญใน HTML, CSS, JavaScript, React, Node.js, Express, ฐานข้อมูลเชิงสัมพันธ์ และ MongoDB ผมเปิดรับโอกาสงานที่สามารถช่วยพัฒนาบริษัทที่ให้ความสำคัญกับความสำเร็จ แรงจูงใจ และการทำงานเป็นทีม",
         downloadCV: "ดาวน์โหลด CV",
         aboutMeTitle: "เกี่ยวกับฉัน",
-        aboutMeDescription: `สำเร็จหลักสูตร Generation Thailand Junior Software Developer Bootcamp (Cohort 8)
-      มีประสบการณ์ 1 ปี 7 เดือนในตำแหน่ง IT Project Coordinator (HSK ระดับ 5)
-      และจบการศึกษาระดับปริญญาตรีสาขาการศึกษาภาษาจีนจากประเทศจีน
-      มีทักษะการสื่อสาร การทำงานเป็นทีม การปรับตัว การบริหารจัดการ และการแก้ปัญหา
-      เชี่ยวชาญใน HTML, CSS, JavaScript, React, Node.js, Express, ฐานข้อมูลเชิงสัมพันธ์ และ MongoDB
+        aboutMeDescription: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำเร็จหลักสูตร Generation Thailand Junior Software Developer Bootcamp (Cohort 8) มีประสบการณ์ 1 ปี 7 เดือนในตำแหน่ง IT Project Coordinator (HSK ระดับ 5) และจบการศึกษาระดับปริญญาตรีสาขาการศึกษาภาษาจีนจากประเทศจีน มีทักษะการสื่อสาร การทำงานเป็นทีม การปรับตัว การบริหารจัดการ และการแก้ปัญหา &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เชี่ยวชาญใน HTML, CSS, JavaScript, React, Node.js, Express, ฐานข้อมูลเชิงสัมพันธ์ และ MongoDB
       พร้อมที่จะนำความสามารถและความเชี่ยวชาญมาช่วยองค์กรที่ให้ความสำคัญกับการเติบโตและการทำงานเป็นทีม.`,
         tabs: {
             skills: {
@@ -206,7 +198,7 @@ const translations = {
                     "React",
                     "Node.js",
                     "Express",
-                    "ฐานข้อมูลเชิงสัมพันธ์",
+                    "Relational Database",
                     "MongoDB",
                 ],
             },
@@ -233,11 +225,11 @@ const translations = {
         projects: [
             {
                 id: 1,
-                title: 'โครงการ 1',
+                title: 'Project 1 - E-Commerce Business Game',
                 image: '/Img/Project1.png',
                 description: 'Ecommerce project with a team of 4 members, utilizing Scrum and Agile methodologies.',
                 category: 'Ecommerce',
-                technologies: 'MERN Stack',
+                technologies: 'MERN STACK',
                 gitUrl: 'https://project-group7-frontend.vercel.app',
             },
             {
@@ -253,10 +245,10 @@ const translations = {
                 id: 3,
                 title: 'Project 3',
                 image: 'https://pbs.twimg.com/media/Gb0zZPWXcAYhExO?format=jpg&name=large',
-                description: 'Description of Project 3',
-                category: 'Game',
-                technologies: 'React, Node.js, MongoDB',
-                gitUrl: 'https://github.com/Siwakrit',
+                description: '30 JavaScript Projects',
+                category: 'All',
+                technologies: 'HTML, CSS, JavaScript',
+                gitUrl: 'https://github.com/Siwakrit/30-JavaScript.git',
             },
             {
                 id: 4,
@@ -348,7 +340,7 @@ const translations = {
             email: "อีเมล",
             emailAddress: "Mr.siwakrit@gmail.com",
             address: "ที่อยู่",
-            addressLocation: "ประเทศไทย กรุงเทพฯ",
+            addressLocation: "ประเทศไทย สมุทรปราการ",
             subject: "หัวข้อ",
             message: "ข้อความ",
             sendMessage: "ส่งข้อความ",
@@ -366,15 +358,11 @@ const translations = {
         greeting: "你好, 我是Fronk",
         jobTitle: "我是全栈网络开发人员",
         description:
-            "我是一个充满热情的全栈网络开发人员，专注于创建卓越的数字体验。我在HTML、CSS、JavaScript、React、Node.js、Express、关系型数据库和MongoDB方面拥有扎实的基础。我开放接受可以为注重成就、动力和团队合作的公司做出贡献的工作机会。",
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我是一个充满热情的全栈网络开发人员，专注于创建卓越的数字体验。我在HTML、CSS、JavaScript、React、Node.js、Express、关系型数据库和MongoDB方面拥有扎实的基础。我开放接受可以为注重成就、动力和团队合作的公司做出贡献的工作机会。",
         downloadCV: "下载简历",
         aboutMeTitle: "关于我",
-        aboutMeDescription: `完成了 Generation Thailand Junior Software Developer Bootcamp (第八期)
-      拥有 1 年 7 个月的 IT 项目协调员经验 (HSK5级)
-      并在中国完成了四年的中文教育专业本科课程。
-      我具备良好的沟通、团队合作、适应能力、管理和解决问题的能力。
-      熟练掌握 HTML、CSS、JavaScript、React、Node.js、Express、关系数据库和 MongoDB。
-      希望将我的技能和专业知识贡献给一个重视成长思维和团队合作的公司。`,
+        aboutMeDescription: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;完成了 Generation Thailand Junior Software Developer Bootcamp (第八期) 拥有 1 年 7 个月的 IT 项目协调员经验 (HSK5级)，并在中国完成了四年的中文教育专业本科课程。   
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我具备良好的沟通、团队合作、适应能力、管理和解决问题的能力。熟练掌握 HTML、CSS、JavaScript、React、Node.js、Express、关系数据库和 MongoDB。希望将我的技能和专业知识贡献给一个重视成长思维和团队合作的公司。`,
         tabs: {
             skills: {
                 title: "技能",
@@ -412,19 +400,19 @@ const translations = {
         projects: [
             {
                 id: 1,
-                title: '项目1 - 电子商务游戏',
+                title: 'Project 1 - E-Commerce Business Game',
                 image: '/Img/Project1.png',
-                description: '与4名成员的团队合作，采用Scrum和Agile方法开发的电子商务项目。',
-                category: '电子商务',
-                technologies: 'MERN STACKk',
+                description: 'Ecommerce project with a team of 4 members, utilizing Scrum and Agile methodologies.',
+                category: 'Ecommerce',
+                technologies: 'MERN STACK',
                 gitUrl: 'https://project-group7-frontend.vercel.app',
             },
             {
                 id: 2,
-                title: '项目2',
+                title: 'Project 2',
                 image: 'https://pbs.twimg.com/media/GKiTwSMasAA-6wi?format=jpg&name=large',
                 description: 'Description of Project 2',
-                category: '电子商务',
+                category: 'Ecommerce',
                 technologies: 'React, Node.js, MongoDB',
                 gitUrl: 'https://siwakrit-cv.vercel.app/',
             },
@@ -432,10 +420,10 @@ const translations = {
                 id: 3,
                 title: 'Project 3',
                 image: 'https://pbs.twimg.com/media/Gb0zZPWXcAYhExO?format=jpg&name=large',
-                description: 'Description of Project 3',
-                category: '游戏',
-                technologies: 'React, Node.js, MongoDB',
-                gitUrl: 'https://github.com/Siwakrit',
+                description: '30 JavaScript Projects',
+                category: 'All',
+                technologies: 'HTML, CSS, JavaScript',
+                gitUrl: 'https://github.com/Siwakrit/30-JavaScript.git',
             },
             {
                 id: 4,

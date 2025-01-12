@@ -71,7 +71,7 @@ const Projects = () => {
                         <div className="flex flex-col gap-2 pt-[2rem] p-2">
                             <h1 className="text-xl font-bold hover:text-red-600">{project.title}</h1>
                             <p className="text-sm flex-grow">{project.description}</p>
-                            <p className="text-sm flex-grow">Technologies used: {project.technologies}</p>
+                            <p className="text-sm flex-grow">Technologies : {project.technologies}</p>
                             <a
                                 className="text-sm flex-grow underline hover:text-blue-700 text-blue-500 hover:shadow-2xl hover:shadow-blue-600 active:text-blue-800"
                                 href={project.gitUrl} target="_blank" rel="noopener noreferrer"
