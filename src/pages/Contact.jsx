@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaAddressCard } from "react-icons/fa";
@@ -7,20 +7,52 @@ import translations from "../context/translations";
 
 const Contact = () => {
     const { language } = useLanguage();
-    const text = translations[language].contactSection;  // เปลี่ยนเป็น contactSection
+    const text = translations[language].contactSection;
+
+    const [alertMessage, setAlertMessage] = useState(null);  // สร้าง state สำหรับการแจ้งเตือน
+    const [alertType, setAlertType] = useState(''); // กำหนดประเภทของการแจ้งเตือน เช่น success, error
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const formData = {
+            name: event.target.name.value,
+            email: event.target.email.value,
+            subject: event.target.subject.value,
+            message: event.target.message.value,
+        };
+
+        try {
+            const response = await fetch(
+                'https://script.google.com/macros/s/AKfycbwJIW5DGnlFChxo9jF2NJ0OkT37jcvvzdXwj1ZCNB6kSu-nBxhlm-Fknx9-HbLRCWRQhQ/exec',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                    mode: 'no-cors', // ใช้ no-cors mode
+                }
+            );
+
+            // การแจ้งเตือนสำเร็จ
+            setAlertMessage('Thank you for your message! We will get back to you as soon as possible.');
+            setAlertType('success');
+        } catch (error) {
+            console.error('Error:', error);
+            // การแจ้งเตือนข้อผิดพลาด
+            setAlertMessage('There was an error sending your message. Please try again later.');
+            setAlertType('error');
+        }
+    };
 
     return (
-        <div className='flex flex-col md:flex-row justify-center mb-[10rem]
-         items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]'
-            id='contact'>
-            {/* Contact Info Section */}
+        <div className='flex flex-col md:flex-row justify-center mb-[10rem] items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]' id='contact'>
             <div className='flex flex-col gap-5 md:w-1/2 items-center'>
                 <button className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-32 md:w-40 text-center hover:bg-white hover:text-red-500'>
                     {text.contactMe}
                 </button>
                 <h1 className='text-2xl md:text-3xl font-bold hover:scale-110 hover:text-red-500 active:text-red-500'>{text.title}</h1>
-
-                {/* Phone Info */}
                 <div className='pt-2'>
                     <div className='flex gap-5 items-center pb-5'>
                         <FaPhoneVolume className='hover:scale-110' />
@@ -30,7 +62,6 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Email Info */}
                     <div className='flex gap-5 items-center pb-5'>
                         <MdEmail className='hover:scale-110' />
                         <div>
@@ -39,7 +70,6 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Address Info */}
                     <div className='flex gap-5 items-center pb-5'>
                         <FaAddressCard className='hover:scale-110' />
                         <div>
@@ -48,17 +78,15 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            {/* Contact Form Section */}
-            <form className='flex flex-col gap-5 md:w-1/2'>
-                {/* Name and Email */}
+            <form onSubmit={handleSubmit} className='flex flex-col gap-5 md:w-1/2'>
                 <div className='flex flex-col md:flex-row gap-4'>
                     <div className='flex flex-col w-full'>
                         <label htmlFor="Name" className='text-sm font-medium'>{text.name}</label>
                         <input
                             type="text"
+                            name='name'
                             className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
                             placeholder={text.placeholderName}
                         />
@@ -68,39 +96,46 @@ const Contact = () => {
                         <label htmlFor="Email" className='text-sm font-medium'>{text.email}</label>
                         <input
                             type="email"
+                            name='email'
                             className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
                             placeholder={text.placeholderEmail}
                         />
                     </div>
                 </div>
 
-                {/* Subject */}
                 <div className='flex flex-col gap-2'>
                     <label htmlFor="Subject" className='text-sm font-medium'>{text.subject}</label>
                     <input
                         type="text"
+                        name='subject'
                         className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
                         placeholder={text.placeholderSubject}
                     />
                 </div>
 
-                {/* Message */}
                 <div className='flex flex-col gap-2'>
                     <label htmlFor="Message" className='text-sm font-medium'>{text.message}</label>
                     <textarea
-                        className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform resize-none text-black
-                h-40 md:h-48'
+                        name='message'
+                        className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform resize-none text-black h-40 md:h-48'
                         placeholder={text.placeholderMessage}
                     ></textarea>
                 </div>
 
-                {/* Submit Button */}
                 <button
+                    type='submit'
                     className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-full md:w-40 text-center hover:bg-white hover:text-red-500 transition-colors'
                 >
                     {text.sendMessage}
                 </button>
             </form>
+
+            {/* การแสดงผล Alert */}
+            {alertMessage && (
+                <div className={`fixed bottom-10 right-10 p-4 w-80 text-white rounded-md shadow-lg transition-all ${alertType === 'success' ? 'bg-green-500' : 'bg-red-500'}`}>
+                    <p className="text-center">{alertMessage}</p>
+                </div>
+            )}
         </div>
     );
 };
