@@ -9,13 +9,30 @@ const Contact = () => {
     const { language } = useLanguage();
     const text = translations[language].contactSection;
 
-    const [alertMessage, setAlertMessage] = useState(null);  // สร้าง state สำหรับการแจ้งเตือน
+    const [alertMessage, setAlertMessage] = useState(null); // สร้าง state สำหรับการแจ้งเตือน
     const [alertType, setAlertType] = useState(''); // กำหนดประเภทของการแจ้งเตือน เช่น success, error
+    const [timeoutId, setTimeoutId] = useState(null); // เก็บ id ของ timeout
+
+    const handleAlert = (message, type) => {
+        setAlertMessage(message);
+        setAlertType(type);
+
+        // เคลียร์ timeout เดิม (ถ้ามี)
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+
+        // ตั้งเวลาให้ข้อความหายไปหลังจาก 3 วินาที
+        const id = setTimeout(() => {
+            setAlertMessage(null);
+        }, 3000);
+
+        setTimeoutId(id);
+    };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        // เก็บข้อมูลจากฟอร์ม
         const formData = {
             name: event.target.name.value.trim(),
             email: event.target.email.value.trim(),
@@ -23,41 +40,34 @@ const Contact = () => {
             message: event.target.message.value.trim(),
         };
 
-        // ตรวจสอบข้อมูลว่าถูกต้อง
         if (!formData.name) {
-            setAlertMessage('Please enter your name.');
-            setAlertType('error');
+            handleAlert('Please enter your name.', 'error');
             return;
         }
 
         if (!formData.email) {
-            setAlertMessage('Please enter your email.');
-            setAlertType('error');
+            handleAlert('Please enter your email.', 'error');
             return;
         }
 
-        // ตรวจสอบรูปแบบอีเมล
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
-            setAlertMessage('Please enter a valid email address.');
-            setAlertType('error');
+            handleAlert('Please enter a valid email address.', 'error');
             return;
         }
 
         if (!formData.subject) {
-            setAlertMessage('Please enter a subject.');
-            setAlertType('error');
+            handleAlert('Please enter a subject.', 'error');
             return;
         }
 
         if (!formData.message) {
-            setAlertMessage('Please enter a message.');
-            setAlertType('error');
+            handleAlert('Please enter a message.', 'error');
             return;
         }
 
         try {
-            const response = await fetch(
+            await fetch(
                 'https://script.google.com/macros/s/AKfycbwJIW5DGnlFChxo9jF2NJ0OkT37jcvvzdXwj1ZCNB6kSu-nBxhlm-Fknx9-HbLRCWRQhQ/exec',
                 {
                     method: 'POST',
@@ -69,17 +79,12 @@ const Contact = () => {
                 }
             );
 
-            // การแจ้งเตือนสำเร็จ
-            setAlertMessage('Thank you for your message! We will get back to you as soon as possible.');
-            setAlertType('success');
+            handleAlert('Thank you for your message! We will get back to you as soon as possible.', 'success');
         } catch (error) {
             console.error('Error:', error);
-            // การแจ้งเตือนข้อผิดพลาด
-            setAlertMessage('There was an error sending your message. Please try again later.');
-            setAlertType('error');
+            handleAlert('There was an error sending your message. Please try again later.', 'error');
         }
     };
-
 
     return (
         <div className='flex flex-col md:flex-row justify-center mb-[10rem] items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]' id='contact'>
@@ -89,6 +94,7 @@ const Contact = () => {
                 </button>
                 <h1 className='text-2xl md:text-3xl font-bold hover:scale-110 hover:text-red-500 active:text-red-500'>{text.title}</h1>
                 <div className='pt-2'>
+                    {/* Contact Information */}
                     <div className='flex gap-5 items-center pb-5'>
                         <FaPhoneVolume className='hover:scale-110' />
                         <div>
@@ -96,7 +102,6 @@ const Contact = () => {
                             <p className='hover:scale-110'>{text.phoneNumber}</p>
                         </div>
                     </div>
-
                     <div className='flex gap-5 items-center pb-5'>
                         <MdEmail className='hover:scale-110' />
                         <div>
@@ -104,7 +109,6 @@ const Contact = () => {
                             <p className='hover:scale-110'>{text.emailAddress}</p>
                         </div>
                     </div>
-
                     <div className='flex gap-5 items-center pb-5'>
                         <FaAddressCard className='hover:scale-110' />
                         <div>
@@ -126,7 +130,6 @@ const Contact = () => {
                             placeholder={text.placeholderName}
                         />
                     </div>
-
                     <div className='flex flex-col w-full'>
                         <label htmlFor="Email" className='text-sm font-medium'>{text.email}</label>
                         <input
@@ -137,7 +140,6 @@ const Contact = () => {
                         />
                     </div>
                 </div>
-
                 <div className='flex flex-col gap-2'>
                     <label htmlFor="Subject" className='text-sm font-medium'>{text.subject}</label>
                     <input
@@ -147,7 +149,6 @@ const Contact = () => {
                         placeholder={text.placeholderSubject}
                     />
                 </div>
-
                 <div className='flex flex-col gap-2'>
                     <label htmlFor="Message" className='text-sm font-medium'>{text.message}</label>
                     <textarea
@@ -156,7 +157,6 @@ const Contact = () => {
                         placeholder={text.placeholderMessage}
                     ></textarea>
                 </div>
-
                 <button
                     type='submit'
                     className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-full md:w-40 text-center hover:bg-white hover:text-red-500 transition-colors'
