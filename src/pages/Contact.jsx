@@ -15,12 +15,46 @@ const Contact = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
+        // เก็บข้อมูลจากฟอร์ม
         const formData = {
-            name: event.target.name.value,
-            email: event.target.email.value,
-            subject: event.target.subject.value,
-            message: event.target.message.value,
+            name: event.target.name.value.trim(),
+            email: event.target.email.value.trim(),
+            subject: event.target.subject.value.trim(),
+            message: event.target.message.value.trim(),
         };
+
+        // ตรวจสอบข้อมูลว่าถูกต้อง
+        if (!formData.name) {
+            setAlertMessage('Please enter your name.');
+            setAlertType('error');
+            return;
+        }
+
+        if (!formData.email) {
+            setAlertMessage('Please enter your email.');
+            setAlertType('error');
+            return;
+        }
+
+        // ตรวจสอบรูปแบบอีเมล
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            setAlertMessage('Please enter a valid email address.');
+            setAlertType('error');
+            return;
+        }
+
+        if (!formData.subject) {
+            setAlertMessage('Please enter a subject.');
+            setAlertType('error');
+            return;
+        }
+
+        if (!formData.message) {
+            setAlertMessage('Please enter a message.');
+            setAlertType('error');
+            return;
+        }
 
         try {
             const response = await fetch(
@@ -31,7 +65,7 @@ const Contact = () => {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(formData),
-                    mode: 'no-cors', // ใช้ no-cors mode
+                    mode: 'no-cors',
                 }
             );
 
@@ -45,6 +79,7 @@ const Contact = () => {
             setAlertType('error');
         }
     };
+
 
     return (
         <div className='flex flex-col md:flex-row justify-center mb-[10rem] items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]' id='contact'>
