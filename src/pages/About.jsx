@@ -1,14 +1,14 @@
-import React, { useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import translations from "../context/translations";
 import { useLanguage } from "../context/LanguageContext"; // ดึง Context มาใช้งาน
 
 const About = () => {
   const { language } = useLanguage(); // ดึงค่าภาษา
   const [selectedTab, setSelectedTab] = useState("skills");
-  const [isPending, setIsPending] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
-    setIsPending(() => {
+    startTransition(() => {
       setSelectedTab(id);
     });
   };
@@ -46,10 +46,11 @@ const About = () => {
               <button
                 key={id}
                 onClick={() => handleTabChange(id)}
-                className={`${selectedTab === id
-                  ? "bg-red-500 text-white"
-                  : "text-black dark:text-white dark:bg-gray-800"
-                  } p-2 font-bold hover:underline hover:text-white hover:bg-red-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-600 active:bg-red-600 active:scale-90 rounded-sm`}
+                className={`${
+                  selectedTab === id
+                    ? "bg-red-500 text-white"
+                    : "text-black dark:text-white dark:bg-gray-800"
+                } ${isPending ? "opacity-70" : ""} p-2 font-bold hover:underline hover:text-white hover:bg-red-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-600 active:bg-red-600 active:scale-90 rounded-sm`}
               >
                 {title}
               </button>

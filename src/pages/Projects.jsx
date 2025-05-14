@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from 'react';
+import { useState } from 'react';
 import translations from "../context/translations";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -6,7 +6,7 @@ const Projects = () => {
     const { language } = useLanguage();
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [visibleProjectsCount, setVisibleProjectsCount] = useState(3);
-    const [isPending, startTransition] = useTransition();
+    // const [isPending, startTransition] = useTransition();
 
     // ดึงข้อมูลจาก translations
     const text = translations[language];

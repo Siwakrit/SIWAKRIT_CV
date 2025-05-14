@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLanguage } from "../context/LanguageContext"; // ใช้ useLanguage
 import translations from "../context/translations";
 
