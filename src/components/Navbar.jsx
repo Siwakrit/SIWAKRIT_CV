@@ -206,7 +206,7 @@ const Navbar = () => {
                                     <span className={`text-xs font-mono ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>GitHub</span>
                                 </Link>
                                 <Link
-                                    to="https://www.facebook.com/shikabi"
+                                    to="https://www.facebook.com/SHIKAFZ"
                                     target='_blank'
                                     className={`flex flex-col items-center justify-center gap-1 p-3 rounded-md ${
                                         darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-blue-50 hover:bg-blue-100'
@@ -358,7 +358,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="https://www.facebook.com/shikabi" target='_blank' aria-label="Facebook">
+                            <Link to="https://www.facebook.com/SHIKAFZ" target='_blank' aria-label="Facebook">
                                 <div className={`p-2 rounded-lg ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-all`}>
                                     <FaFacebook className={`transition-all ${darkMode ? 'text-white hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'}`} size={24} />
                                 </div>
