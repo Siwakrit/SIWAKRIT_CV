@@ -1,0 +1,173 @@
+{
+    "home": "主页",
+    "contact": "联系",
+    "about": "关于",
+    "greeting": "你好, 我是Fronk",
+    "jobTitle": "我是全栈网络开发人员",
+    "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我是一个充满热情的全栈网络开发人员，专注于创建卓越的数字体验。我在HTML、CSS、JavaScript、React、Node.js、Express、关系型数据库和MongoDB方面拥有扎实的基础。我开放接受可以为注重成就、动力和团队合作的公司做出贡献的工作机会。",
+    "downloadCV": "下载简历",
+    "aboutMeTitle": "关于我",
+    "aboutMeDescription": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;完成了 Generation Thailand Junior Software Developer Bootcamp (第八期) 拥有 1 年 7 个月的 IT 项目协调员经验 (HSK5级)，并在中国完成了四年的中文教育专业本科课程。   \n      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我具备良好的沟通、团队合作、适应能力、管理和解决问题的能力。熟练掌握 HTML、CSS、JavaScript、React、Node.js、Express、关系数据库和 MongoDB。希望将我的技能和专业知识贡献给一个重视成长思维和团队合作的公司。",
+    "tabs": {
+        "skills": {
+            "title": "技能",
+            "content": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "Node.js",
+                "Express",
+                "关系型数据库",
+                "MongoDB"
+            ]
+        },
+        "education": {
+            "title": "教育背景",
+            "content": [
+                "华侨大学（中国） 2018 年 9 月 - 2022 年 6 月：主修中文教育",
+                "Generation Thailand Junior Software Developer Bootcamp (第八期) 2024 年 9 月 – 2024 年 12 月"
+            ]
+        },
+        "certifications": {
+            "title": "证书",
+            "content": [
+                "Generation Thailand Junior Software Developer Bootcamp",
+                "汉语水平考试 HSK 5"
+            ]
+        }
+    },
+    "All": "全部",
+    "Form": "表单",
+    "Ecommerce": "电子商务",
+    "Game": "游戏",
+    "seeMore": "查看更多",
+    "projects": [
+        {
+            "id": 1,
+            "title": "Project 1 - E-Commerce Business Game",
+            "image": "/Img/Project1.png",
+            "description": "Ecommerce project with a team of 4 members, utilizing Scrum and Agile methodologies.",
+            "category": "Ecommerce",
+            "technologies": "MERN STACK",
+            "gitUrl": "https://project-group7-frontend.vercel.app"
+        },
+        {
+            "id": 2,
+            "title": "Project 2",
+            "image": "https://pbs.twimg.com/media/GKiTwSMasAA-6wi?format=jpg&name=large",
+            "description": "Description of Project 2",
+            "category": "Ecommerce",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://siwakrit-cv.vercel.app/"
+        },
+        {
+            "id": 3,
+            "title": "Project 3",
+            "image": "https://pbs.twimg.com/media/Gb0zZPWXcAYhExO?format=jpg&name=large",
+            "description": "30 JavaScript Projects",
+            "category": "All",
+            "technologies": "HTML, CSS, JavaScript",
+            "gitUrl": "https://github.com/Siwakrit/30-JavaScript.git"
+        },
+        {
+            "id": 4,
+            "title": "Project 4",
+            "image": "https://pbs.twimg.com/media/GeX2vuvbUAQgWoh?format=jpg&name=4096x4096",
+            "description": "Description of Project 4",
+            "category": "Game",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 5,
+            "title": "Project 5",
+            "image": "https://pbs.twimg.com/media/GKiTwSMaUAAUSk9?format=jpg&name=large",
+            "description": "Description of Project 5",
+            "category": "Game",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 6,
+            "title": "Project 6",
+            "image": "https://pbs.twimg.com/media/Gc5jd9WaAAQSQjy?format=jpg&name=medium",
+            "description": "Description of Project 6",
+            "category": "Game",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 7,
+            "title": "Project 7",
+            "image": "https://pbs.twimg.com/media/GcdaqJkWsAE_Kh4?format=jpg&name=large",
+            "description": "Description of Project 7",
+            "category": "Ecommerce",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 8,
+            "title": "Project 8",
+            "image": "https://pbs.twimg.com/media/GcdaqJjWUAAALHg?format=jpg&name=large",
+            "description": "Description of Project 8",
+            "category": "Ecommerce",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 9,
+            "title": "Project 9",
+            "image": "https://pbs.twimg.com/media/GZoabiSWQAUI97V?format=jpg&name=large",
+            "description": "Fontend Ecommerce",
+            "category": "Ecommerce",
+            "technologies": "React, Node.js, TailwindCSS",
+            "gitUrl": "https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git"
+        },
+        {
+            "id": 10,
+            "title": "Project 10",
+            "image": "https://pbs.twimg.com/media/GV0rAoSbIAAOtQd?format=jpg&name=medium",
+            "description": "Fontend Ecommerce",
+            "category": "Form",
+            "technologies": "React, Node.js, TailwindCSS",
+            "gitUrl": "https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git"
+        },
+        {
+            "id": 11,
+            "title": "Project 11",
+            "image": "https://pbs.twimg.com/media/GUsm9PCW4AAbZGt?format=jpg&name=medium",
+            "description": "Fontend Ecommerce",
+            "category": "Form",
+            "technologies": "React, Node.js, TailwindCSS",
+            "gitUrl": "https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git"
+        },
+        {
+            "id": 12,
+            "title": "Project 12",
+            "image": "https://pbs.twimg.com/media/GeXBmI7XYAALQUJ?format=jpg&name=medium",
+            "description": "Fontend Ecommerce",
+            "category": "Form",
+            "technologies": "React, Node.js, TailwindCSS",
+            "gitUrl": "https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git"
+        }
+    ],
+    "contactSection": {
+        "contactMe": "联系我",
+        "title": "永川",
+        "phone": "电话",
+        "phoneNumber": "+66 95 294 1698",
+        "email": "电子邮件",
+        "emailAddress": "Mr.siwakrit@gmail.com",
+        "address": "地址",
+        "addressLocation": "泰国 北榄府",
+        "subject": "主题",
+        "message": "信息",
+        "sendMessage": "发送信息",
+        "name": "名字",
+        "placeholderName": "请输入你的名字",
+        "placeholderEmail": "请输入你的邮箱",
+        "placeholderSubject": "请输入你的主题",
+        "placeholderMessage": "请输入你的信息"
+    }
+}

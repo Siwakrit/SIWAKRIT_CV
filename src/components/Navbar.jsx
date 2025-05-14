@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedinIn, FaFacebook, FaSun, FaMoon, FaGlobeAsia } from "react-icons/fa";
 import { US, CN, TH } from 'country-flag-icons/react/3x2';
-import { useDarkMode } from '../context/DarkModeContext'; // นำเข้า useDarkMode จาก context
+import { useDarkMode } from '../hooks/useDarkMode'; // นำเข้า useDarkMode จากไฟล์ใหม่
 import { useLanguage } from "../context/LanguageContext"; // ใช้ useLanguage
 import translations from "../context/translations";
 
@@ -23,7 +23,7 @@ const Navbar = () => {
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen); // สลับสถานะเปิดปิดเมนู
     };    return (
-        <div className='flex justify-between items-center gap-2 md:p-3 shadow-md w-full '>
+        <div className='flex justify-between items-center gap-2 md:p-3 w-full'>
             {/* โลโก้ */}
             <ul>
                 <li>
@@ -115,7 +115,7 @@ const Navbar = () => {
                     {/* ปุ่ม Hamburger Menu */}
                     <button 
                         onClick={handleMenuToggle} 
-                        className="text-3xl bg-teal-400 dark:bg-teal-400/30 text-gray-800 dark:text-white rounded px-2"
+                        className="text-3xl text-gray-800 dark:text-white rounded px-2"
                         aria-label="Toggle menu"
                     >
                         {menuOpen ? "✕" : "☰"}

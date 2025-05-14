@@ -1,0 +1,173 @@
+{
+    "home": "Home",
+    "contact": "Contact",
+    "about": "About",
+    "greeting": "Hello, I'm Fronk",
+    "jobTitle": "I'm a full stack web developer",
+    "description": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm a full stack web developer with a passion for creating exceptional digital experiences. With a strong foundation in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. I am open to job opportunities where I can contribute to a company that values achievement, motivation, and teamwork.",
+    "downloadCV": "Download CV",
+    "aboutMeTitle": "About Me",
+    "aboutMeDescription": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Completed Generation Thailand's Junior Software Developer Bootcamp (Cohort 8). With 1 year and 7 months of experience as an IT Project Coordinator (Chinese Skills HSK5) and a 4-year degree in Education of Chinese Language from China, I have developed strong communication, teamwork, adaptability, management, and problem-solving skills.\n      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proficient in HTML, CSS, JavaScript, React, Node.js, Express, relational databases, and MongoDB. I am eager to contribute my skills and expertise to a company that values a growth mindset, achievement, motivation, and teamwork.",
+    "tabs": {
+        "skills": {
+            "title": "Skills",
+            "content": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "Node.js",
+                "Express",
+                "Relational Database",
+                "MongoDB"
+            ]
+        },
+        "education": {
+            "title": "Education",
+            "content": [
+                "Huaqiao University (China) Sep 2018 - Jun 2022: Majoring in Education of Chinese Language",
+                "Generation Thailand Junior Software Developer Bootcamp (Cohort 8) Sep 2024 – Dec 2024"
+            ]
+        },
+        "certifications": {
+            "title": "Certifications",
+            "content": [
+                "Generation Thailand Junior Software Developer Bootcamp",
+                "Chinese Language HSK 5"
+            ]
+        }
+    },
+    "All": "All",
+    "Form": "Form",
+    "Ecommerce": "Ecommerce",
+    "Game": "Game",
+    "seeMore": "See more",
+    "projects": [
+        {
+            "id": 1,
+            "title": "Project 1 - E-Commerce Business Game",
+            "image": "/Img/Project1.png",
+            "description": "Ecommerce project with a team of 4 members, utilizing Scrum and Agile methodologies.",
+            "category": "Ecommerce",
+            "technologies": "MERN STACK",
+            "gitUrl": "https://project-group7-frontend.vercel.app"
+        },
+        {
+            "id": 2,
+            "title": "Project 2",
+            "image": "https://pbs.twimg.com/media/GKiTwSMasAA-6wi?format=jpg&name=large",
+            "description": "Description of Project 2",
+            "category": "Ecommerce",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://siwakrit-cv.vercel.app/"
+        },
+        {
+            "id": 3,
+            "title": "Project 3",
+            "image": "https://pbs.twimg.com/media/Gb0zZPWXcAYhExO?format=jpg&name=large",
+            "description": "30 JavaScript Projects",
+            "category": "All",
+            "technologies": "HTML, CSS, JavaScript",
+            "gitUrl": "https://github.com/Siwakrit/30-JavaScript.git"
+        },
+        {
+            "id": 4,
+            "title": "Project 4",
+            "image": "https://pbs.twimg.com/media/GeX2vuvbUAQgWoh?format=jpg&name=4096x4096",
+            "description": "Description of Project 4",
+            "category": "Game",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 5,
+            "title": "Project 5",
+            "image": "https://pbs.twimg.com/media/GKiTwSMaUAAUSk9?format=jpg&name=large",
+            "description": "Description of Project 5",
+            "category": "Game",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 6,
+            "title": "Project 6",
+            "image": "https://pbs.twimg.com/media/Gc5jd9WaAAQSQjy?format=jpg&name=medium",
+            "description": "Description of Project 6",
+            "category": "Game",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 7,
+            "title": "Project 7",
+            "image": "https://pbs.twimg.com/media/GcdaqJkWsAE_Kh4?format=jpg&name=large",
+            "description": "Description of Project 7",
+            "category": "Ecommerce",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 8,
+            "title": "Project 8",
+            "image": "https://pbs.twimg.com/media/GcdaqJjWUAAALHg?format=jpg&name=large",
+            "description": "Description of Project 8",
+            "category": "Ecommerce",
+            "technologies": "React, Node.js, MongoDB",
+            "gitUrl": "https://github.com/Siwakrit"
+        },
+        {
+            "id": 9,
+            "title": "Project 9",
+            "image": "https://pbs.twimg.com/media/GZoabiSWQAUI97V?format=jpg&name=large",
+            "description": "Fontend Ecommerce",
+            "category": "Ecommerce",
+            "technologies": "React, Node.js, TailwindCSS",
+            "gitUrl": "https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git"
+        },
+        {
+            "id": 10,
+            "title": "Project 10",
+            "image": "https://pbs.twimg.com/media/GV0rAoSbIAAOtQd?format=jpg&name=medium",
+            "description": "Fontend Ecommerce",
+            "category": "Form",
+            "technologies": "React, Node.js, TailwindCSS",
+            "gitUrl": "https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git"
+        },
+        {
+            "id": 11,
+            "title": "Project 11",
+            "image": "https://pbs.twimg.com/media/GUsm9PCW4AAbZGt?format=jpg&name=medium",
+            "description": "Fontend Ecommerce",
+            "category": "Form",
+            "technologies": "React, Node.js, TailwindCSS",
+            "gitUrl": "https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git"
+        },
+        {
+            "id": 12,
+            "title": "Project 12",
+            "image": "https://pbs.twimg.com/media/GeXBmI7XYAALQUJ?format=jpg&name=medium",
+            "description": "Fontend Ecommerce",
+            "category": "Form",
+            "technologies": "React, Node.js, TailwindCSS",
+            "gitUrl": "https://github.com/Siwakrit/Fake-Store-API-Ecommerce.git"
+        }
+    ],
+    "contactSection": {
+        "contactMe": "Contact Me",
+        "title": "SIWAKRIT PATTAVEESIN",
+        "phone": "Phone",
+        "phoneNumber": "+66 95 294 1698",
+        "email": "Email",
+        "emailAddress": "Mr.siwakrit@gmail.com",
+        "address": "Address",
+        "addressLocation": "Thailand Bangkok",
+        "subject": "Subject",
+        "message": "Message",
+        "sendMessage": "Send Message",
+        "name": "Name",
+        "placeholderName": "Enter your name",
+        "placeholderEmail": "Enter your email",
+        "placeholderSubject": "Enter your subject",
+        "placeholderMessage": "Enter your message"
+    }
+}

@@ -1,12 +1,8 @@
-import { useState, useEffect, createContext, useContext } from "react";
+import { useState, useEffect, createContext } from "react";
+import PropTypes from 'prop-types';
 
 // สร้าง Context สำหรับ Dark Mode
 const DarkModeContext = createContext();
-
-// Custom Hook เพื่อใช้ Context นี้ได้สะดวก
-export const useDarkMode = () => {
-    return useContext(DarkModeContext);
-};
 
 // Utility function สำหรับจัดการ class ของ Dark Mode
 const applyDarkModeClass = (isDarkMode) => {
@@ -43,5 +39,13 @@ const DarkModeProvider = ({ children }) => {
         </DarkModeContext.Provider>
     );
 };
+
+// เพิ่ม PropTypes validation สำหรับ children
+DarkModeProvider.propTypes = {
+    children: PropTypes.node.isRequired
+};
+
+// Export DarkModeContext เพื่อให้ useDarkMode.jsx สามารถเข้าถึงได้
+export { DarkModeContext };
 
 export default DarkModeProvider;
