@@ -60,7 +60,7 @@ const Projects = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl max-h-[100%] mx-auto p-4 w-[100%] h-[100%]">
                 {visibleProjects.map((project) => (
-                    <div key={project.id} className="border border-red-500 rounded-md px-5 p-10 w-[100%] min-h-[fit] hover:scale-105 hover:shadow-2xl hover:shadow-rose-600 bg-red-500 text-white">
+                    <div key={project.id} className="border-2 border-red-500 rounded-md px-5 p-10 w-[100%] min-h-[fit] hover:scale-105 hover:shadow-2xl hover:shadow-rose-600 bg-gradient-to-r from-cyan-500 to-blue-700 text-transparent bg-clip-text  shadow-2xl shadow-rose-600">
                         <div className="flex justify-center w-[100%] h-[fit]">
                             <img
                                 src={project.image}
