@@ -1,19 +1,15 @@
 import { useState, useTransition } from "react";
-import translations from "../context/translations";
-import { useLanguage } from "../context/LanguageContext"; // ดึง Context มาใช้งาน
+import { useLanguage } from "../hooks/useLanguage"; // ใช้ custom hook จากไฟล์ที่ถูกต้อง
 
 const About = () => {
-  const { language } = useLanguage(); // ดึงค่าภาษา
+  const { text } = useLanguage(); // ดึงข้อความตามภาษาที่เลือก
   const [selectedTab, setSelectedTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
-
   const handleTabChange = (id) => {
     startTransition(() => {
       setSelectedTab(id);
     });
   };
-
-  const text = translations[language]; // ดึงข้อความตามภาษาที่เลือก
   const tabs = Object.entries(text.tabs).map(([key, value]) => ({
     id: key,
     title: value.title,

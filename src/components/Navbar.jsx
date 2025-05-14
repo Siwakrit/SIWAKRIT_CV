@@ -3,18 +3,14 @@ import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedinIn, FaFacebook, FaSun, FaMoon, FaGlobeAsia } from "react-icons/fa";
 import { US, CN, TH } from 'country-flag-icons/react/3x2';
 import { useDarkMode } from '../hooks/useDarkMode'; // นำเข้า useDarkMode จากไฟล์ใหม่
-import { useLanguage } from "../context/LanguageContext"; // ใช้ useLanguage
-import translations from "../context/translations";
+import { useLanguage } from "../hooks/useLanguage"; // ใช้ useLanguage hook
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false); // สร้าง state เพื่อควบคุมการสลับโลโก้
     const [menuOpen, setMenuOpen] = useState(false); // สร้าง state สำหรับเปิดปิดเมนูบนมือถือ
-    const [languageDropdown, setLanguageDropdown] = useState(false); // สำหรับจัดการ dropdown ภาษา
-
-    // ดึงค่า darkMode และ toggleDarkMode จาก context
+    const [languageDropdown, setLanguageDropdown] = useState(false); // สำหรับจัดการ dropdown ภาษา    // ดึงค่า darkMode และ toggleDarkMode จาก context
     const { darkMode, toggleDarkMode } = useDarkMode();
-    const { language, setLanguage } = useLanguage(); // ดึงค่า language และ setLanguage
-    const text = translations[language]; // ดึงข้อความตามภาษาที่เลือก
+    const { language, setLanguage, text } = useLanguage(); // ดึงค่า language, setLanguage และข้อความตามภาษา
 
     const handleToggle = () => {
         setToggle(!toggle); // สลับค่าโลโก้

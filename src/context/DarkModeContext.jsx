@@ -45,7 +45,6 @@ DarkModeProvider.propTypes = {
     children: PropTypes.node.isRequired
 };
 
-// Export DarkModeContext เพื่อให้ useDarkMode.jsx สามารถเข้าถึงได้
+// ส่งออกทั้ง Context และ Provider
 export { DarkModeContext };
-
 export default DarkModeProvider;

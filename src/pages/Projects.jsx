@@ -1,16 +1,12 @@
 import { useState } from 'react';
-import translations from "../context/translations";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Projects = () => {
-    const { language } = useLanguage();
+    const { text } = useLanguage();
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [visibleProjectsCount, setVisibleProjectsCount] = useState(3);
-    // const [isPending, startTransition] = useTransition();
-
-    // ดึงข้อมูลจาก translations
-    const text = translations[language];
-    const projects = text.projects; // ดึงข้อมูลโปรเจกต์จาก translations
+    // const [isPending, startTransition] = useTransition();    // ดึงข้อมูลโปรเจกต์
+    const projects = text.projects; // ดึงข้อมูลโปรเจกต์จาก text ที่ได้จาก hook
 
     // ฟังก์ชันสำหรับกรองโปรเจกต์ตาม category ที่เลือก
     const filterProjects = () => {

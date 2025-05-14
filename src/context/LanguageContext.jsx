@@ -1,8 +1,11 @@
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
+import PropTypes from 'prop-types';
 
+// สร้าง Context สำหรับภาษา
 const LanguageContext = createContext();
 
-export const LanguageProvider = ({ children }) => {
+// Provider component สำหรับให้บริการภาษาทั่วทั้งแอพ
+const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useState("en"); // ค่าเริ่มต้นเป็นภาษาอังกฤษ
 
     return (
@@ -12,7 +15,10 @@ export const LanguageProvider = ({ children }) => {
     );
 };
 
-// สร้าง custom hook
-export const useLanguage = () => {
-    return useContext(LanguageContext);
+// เพิ่ม PropTypes validation สำหรับ children
+LanguageProvider.propTypes = {
+    children: PropTypes.node.isRequired
 };
+
+// ส่งออก Context และ Provider
+export { LanguageContext, LanguageProvider };

@@ -2,12 +2,10 @@ import { useState } from 'react';
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaAddressCard } from "react-icons/fa";
-import { useLanguage } from "../context/LanguageContext";
-import translations from "../context/translations";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Contact = () => {
-    const { language } = useLanguage();
-    const text = translations[language].contactSection;
+    const { text } = useLanguage();
 
     const [alertMessage, setAlertMessage] = useState(null); // สร้าง state สำหรับการแจ้งเตือน
     const [alertType, setAlertType] = useState(''); // กำหนดประเภทของการแจ้งเตือน เช่น success, error

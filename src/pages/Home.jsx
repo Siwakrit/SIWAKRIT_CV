@@ -1,9 +1,6 @@
-import { useLanguage } from "../context/LanguageContext"; // ใช้ useLanguage
-import translations from "../context/translations";
+import { useLanguage } from "../hooks/useLanguage"; // ใช้ useLanguage hook
 
-const Hero = () => {
-  const { language } = useLanguage(); // ดึงค่าภาษาจาก Context
-  const text = translations[language]; // ดึงข้อความตามภาษาที่เลือก
+const Hero = () => {  const { text } = useLanguage(); // ดึงข้อความตามภาษาที่เลือกจาก hook
 
 
   return (
