@@ -6,6 +6,8 @@ import { useLanguage } from "../hooks/useLanguage";
 
 const Contact = () => {
     const { text } = useLanguage();
+    // ดึงข้อมูลเฉพาะส่วน contactSection
+    const contactText = text.contactSection;
 
     const [alertMessage, setAlertMessage] = useState(null); // สร้าง state สำหรับการแจ้งเตือน
     const [alertType, setAlertType] = useState(''); // กำหนดประเภทของการแจ้งเตือน เช่น success, error
@@ -85,81 +87,78 @@ const Contact = () => {
     };
 
     return (
-        <div className='flex flex-col md:flex-row justify-center mb-[10rem] items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]' id='contact'>
-            <div className='flex flex-col gap-5 md:w-1/2 items-center'>
+        <div className='flex flex-col md:flex-row justify-center mb-[10rem] items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]' id='contact'>            <div className='flex flex-col gap-5 md:w-1/2 items-center'>
                 <button className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-32 md:w-40 text-center hover:bg-white hover:text-red-500'>
-                    {text.contactMe}
+                    {contactText.contactMe}
                 </button>
-                <h1 className='text-2xl md:text-3xl font-bold hover:scale-110 hover:text-red-500 active:text-red-500'>{text.title}</h1>
+                <h1 className='text-2xl md:text-3xl font-bold hover:scale-110 hover:text-red-500 active:text-red-500'>{contactText.title}</h1>
                 <div className='pt-2'>
                     {/* Contact Information */}
                     <div className='flex gap-5 items-center pb-5'>
                         <FaPhoneVolume className='hover:scale-110' />
                         <div>
-                            <p className='font-bold hover:scale-110'>{text.phone}</p>
-                            <p className='hover:scale-110'>{text.phoneNumber}</p>
+                            <p className='font-bold hover:scale-110'>{contactText.phone}</p>
+                            <p className='hover:scale-110'>{contactText.phoneNumber}</p>
                         </div>
                     </div>
                     <div className='flex gap-5 items-center pb-5'>
                         <MdEmail className='hover:scale-110' />
                         <div>
-                            <p className='font-bold hover:scale-110'>{text.email}</p>
-                            <p className='hover:scale-110'>{text.emailAddress}</p>
+                            <p className='font-bold hover:scale-110'>{contactText.email}</p>
+                            <p className='hover:scale-110'>{contactText.emailAddress}</p>
                         </div>
                     </div>
                     <div className='flex gap-5 items-center pb-5'>
                         <FaAddressCard className='hover:scale-110' />
                         <div>
-                            <p className='font-bold hover:scale-110'>{text.address}</p>
-                            <p className='hover:scale-110'>{text.addressLocation}</p>
+                            <p className='font-bold hover:scale-110'>{contactText.address}</p>
+                            <p className='hover:scale-110'>{contactText.addressLocation}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <form onSubmit={handleSubmit} className='flex flex-col gap-5 md:w-1/2'>
-                <div className='flex flex-col md:flex-row gap-4'>
-                    <div className='flex flex-col w-full'>
-                        <label htmlFor="Name" className='text-sm font-medium'>{text.name}</label>
+                <div className='flex flex-col md:flex-row gap-4'>                    <div className='flex flex-col w-full'>
+                        <label htmlFor="Name" className='text-sm font-medium'>{contactText.name}</label>
                         <input
                             type="text"
                             name='name'
                             className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
-                            placeholder={text.placeholderName}
+                            placeholder={contactText.placeholderName}
                         />
                     </div>
                     <div className='flex flex-col w-full'>
-                        <label htmlFor="Email" className='text-sm font-medium'>{text.email}</label>
+                        <label htmlFor="Email" className='text-sm font-medium'>{contactText.email}</label>
                         <input
                             type="email"
                             name='email'
                             className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
-                            placeholder={text.placeholderEmail}
+                            placeholder={contactText.placeholderEmail}
                         />
                     </div>
                 </div>
                 <div className='flex flex-col gap-2'>
-                    <label htmlFor="Subject" className='text-sm font-medium'>{text.subject}</label>
+                    <label htmlFor="Subject" className='text-sm font-medium'>{contactText.subject}</label>
                     <input
                         type="text"
                         name='subject'
                         className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform text-black'
-                        placeholder={text.placeholderSubject}
-                    />
-                </div>
+                        placeholder={contactText.placeholderSubject}
+                    />                </div>
                 <div className='flex flex-col gap-2'>
-                    <label htmlFor="Message" className='text-sm font-medium'>{text.message}</label>
+                    <label htmlFor="Message" className='text-sm font-medium'>{contactText.message}</label>
                     <textarea
                         name='message'
                         className='border border-slate-300 rounded-sm p-3 outline-cyan-500 hover:scale-105 transition-transform resize-none text-black h-40 md:h-48'
-                        placeholder={text.placeholderMessage}
+                        placeholder={contactText.placeholderMessage}
                     ></textarea>
                 </div>
                 <button
                     type='submit'
                     className='bg-red-500 border border-red-500 rounded-md p-3 text-white font-bold w-full md:w-40 text-center hover:bg-white hover:text-red-500 transition-colors'
                 >
-                    {text.sendMessage}
+                    {contactText.sendMessage}
                 </button>
             </form>
 
