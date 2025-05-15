@@ -87,46 +87,47 @@ const Contact = () => {
     };
 
     return (
-        <div className='flex flex-col md:flex-row justify-center mb-[10rem] items-center md:items-center p-6 md:p-20 gap-8 h-screen w-[100%]' id='contact'>
-            <div className='flex flex-col gap-5 md:w-1/2 items-center'>
-                <button className='bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 border-none rounded-md p-3 text-white font-bold w-32 md:w-40 text-center shadow-lg hover:scale-105 hover:from-cyan-300 hover:to-blue-600 transition-all'>
+        <>
+        <div className='flex flex-col md:flex-row justify-center items-stretch gap-8 w-full max-w-3xl md:max-w-4xl xl:max-w-6xl mx-auto py-8 px-2 md:px-8 lg:px-16' id='contact'>
+            <div className='flex flex-col gap-4 md:w-1/2 w-full items-center md:items-start'>
+                <button className='bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 border-none rounded-md p-2 text-white font-bold w-32 md:w-36 text-center shadow-lg hover:scale-105 hover:from-cyan-300 hover:to-blue-600 transition-all'>
                     {contactText.contactMe}
                 </button>
-                <h1 className='text-2xl md:text-3xl font-bold hover:scale-110 hover:text-cyan-400 active:text-cyan-400 transition-colors'>{contactText.title}</h1>
-                <div className='pt-2'>
+                <h1 className='text-xl md:text-2xl font-bold hover:scale-110 hover:text-cyan-400 active:text-cyan-400 transition-colors'>{contactText.title}</h1>
+                <div className='pt-1 w-full'>
                     {/* Contact Information */}
-                    <div className='flex gap-5 items-center pb-5'>
-                        <FaPhoneVolume className='text-cyan-400 text-xl hover:scale-110 transition-transform' />
+                    <div className='flex gap-4 items-center pb-3'>
+                        <FaPhoneVolume className='text-cyan-400 text-xl' />
                         <div>
-                            <p className='font-bold text-cyan-200 hover:scale-110 transition-transform'>{contactText.phone}</p>
-                            <p className='hover:scale-110 transition-transform'>{contactText.phoneNumber}</p>
+                            <p className='font-bold text-cyan-200'>{contactText.phone}</p>
+                            <p>{contactText.phoneNumber}</p>
                         </div>
                     </div>
-                    <div className='flex gap-5 items-center pb-5'>
-                        <MdEmail className='text-cyan-400 text-xl hover:scale-110 transition-transform' />
+                    <div className='flex gap-4 items-center pb-3'>
+                        <MdEmail className='text-cyan-400 text-xl' />
                         <div>
-                            <p className='font-bold text-cyan-200 hover:scale-110 transition-transform'>{contactText.email}</p>
-                            <p className=' hover:scale-110 transition-transform'>{contactText.emailAddress}</p>
+                            <p className='font-bold text-cyan-200'>{contactText.email}</p>
+                            <p>{contactText.emailAddress}</p>
                         </div>
                     </div>
-                    <div className='flex gap-5 items-center pb-5'>
-                        <FaAddressCard className='text-cyan-400 text-xl hover:scale-110 transition-transform' />
+                    <div className='flex gap-4 items-center pb-3'>
+                        <FaAddressCard className='text-cyan-400 text-xl' />
                         <div>
-                            <p className='font-bold text-cyan-200 hover:scale-110 transition-transform'>{contactText.address}</p>
-                            <p className='hover:scale-110 transition-transform'>{contactText.addressLocation}</p>
+                            <p className='font-bold text-cyan-200'>{contactText.address}</p>
+                            <p>{contactText.addressLocation}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <form onSubmit={handleSubmit} className='flex flex-col gap-5 md:w-1/2 '>
-                <div className='flex flex-col md:flex-row gap-4'>
+            <form onSubmit={handleSubmit} className='flex flex-col gap-4 md:w-1/2 w-full'>
+                <div className='flex flex-col md:flex-row gap-2 md:gap-3'>
                     <div className='flex flex-col w-full'>
                         <label htmlFor="Name" className='text-sm font-medium text-cyan-200'>{contactText.name}</label>
                         <input
                             type="text"
                             name='name'
-                            className='border border-cyan-300/40 rounded-md p-3 outline-cyan-500 bg-white/80 text-black hover:scale-105 transition-transform'
+                            className='border border-cyan-300/40 rounded-md p-2 outline-cyan-500 bg-white/80 text-black focus:ring-2 focus:ring-cyan-400 transition-all text-base md:text-sm'
                             placeholder={contactText.placeholderName}
                         />
                     </div>
@@ -135,7 +136,7 @@ const Contact = () => {
                         <input
                             type="email"
                             name='email'
-                            className='border border-cyan-300/40 rounded-md p-3 outline-cyan-500 bg-white/80 text-black hover:scale-105 transition-transform'
+                            className='border border-cyan-300/40 rounded-md p-2 outline-cyan-500 bg-white/80 text-black focus:ring-2 focus:ring-cyan-400 transition-all text-base md:text-sm'
                             placeholder={contactText.placeholderEmail}
                         />
                     </div>
@@ -145,7 +146,7 @@ const Contact = () => {
                     <input
                         type="text"
                         name='subject'
-                        className='border border-cyan-300/40 rounded-md p-3 outline-cyan-500 bg-white/80 text-black hover:scale-105 transition-transform'
+                        className='border border-cyan-300/40 rounded-md p-2 outline-cyan-500 bg-white/80 text-black focus:ring-2 focus:ring-cyan-400 transition-all text-base md:text-sm'
                         placeholder={contactText.placeholderSubject}
                     />
                 </div>
@@ -153,13 +154,13 @@ const Contact = () => {
                     <label htmlFor="Message" className='text-sm font-medium text-cyan-200'>{contactText.message}</label>
                     <textarea
                         name='message'
-                        className='border border-cyan-300/40 rounded-md p-3 outline-cyan-500 bg-white/80 text-black hover:scale-105 transition-transform resize-none h-40 md:h-48'
+                        className='border border-cyan-300/40 rounded-md p-2 outline-cyan-500 bg-white/80 text-black focus:ring-2 focus:ring-cyan-400 transition-all resize-none h-20 md:h-28 text-base md:text-sm'
                         placeholder={contactText.placeholderMessage}
                     ></textarea>
                 </div>
                 <button
                     type='submit'
-                    className='bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 border-none rounded-md p-3 text-white font-bold w-full md:w-40 text-center shadow-lg hover:scale-105 hover:from-cyan-300 hover:to-blue-600 transition-all'
+                    className='bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 border-none rounded-md p-2 text-white font-bold w-full md:w-32 text-center shadow-lg hover:scale-105 hover:from-cyan-300 hover:to-blue-600 transition-all text-base md:text-sm'
                 >
                     {contactText.sendMessage}
                 </button>
@@ -172,6 +173,7 @@ const Contact = () => {
                 </div>
             )}
         </div>
+        </>
     );
 };
 

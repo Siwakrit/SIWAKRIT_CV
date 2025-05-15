@@ -1,4 +1,3 @@
-
 import { useDarkMode } from "../hooks/useDarkMode";
 
 const Footer = () => {
@@ -30,4 +29,4 @@ const Footer = () => {
   )
 }
 
-export default Footer   
+export default Footer

@@ -42,12 +42,11 @@ function App() {
 
                 <div className="relative z-10 min-h-screen pb-24">
                     <Navbar />
-                    <div className="px-4 md:px-20">
-                      <Hero />
-                      <About />
-                      <Projects />
-                      <Contact />
-                    </div>
+                    {/* เอา padding ออก แล้วให้แต่ละ sectionจัดการเอง */}
+                    <Hero />
+                    <About />
+                    <Projects />
+                    <Contact />
                 </div>
                 <Footer />
             </div>
