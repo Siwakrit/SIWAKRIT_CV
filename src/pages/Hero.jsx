@@ -1,10 +1,12 @@
 import { useLanguage } from "../hooks/useLanguage"; // ใช้ useLanguage hook
-import { FaCode, FaDownload, FaLaptopCode } from "react-icons/fa";
+import { FaCode, FaDownload, FaLaptopCode, FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
 import { HiTerminal } from "react-icons/hi";
+import { SiNextdotjs, SiTypescript, SiNestjs, SiPostgresql, SiMongodb } from "react-icons/si";
 import { useEffect, useState } from "react";
 import { useDarkMode } from "../hooks/useDarkMode"; // เพิ่ม import useDarkMode
 
-const Hero = () => {  const { text } = useLanguage(); // ดึงข้อความตามภาษาที่เลือกจาก hook
+const Hero = () => {  
+  const { text } = useLanguage(); // ดึงข้อความตามภาษาที่เลือกจาก hook
   const { darkMode } = useDarkMode(); // ดึงค่า darkMode จาก context
   const [currentTypePhrase, setCurrentTypePhrase] = useState("");
   const [typingIndex, setTypingIndex] = useState(0);
@@ -34,8 +36,11 @@ const Hero = () => {  const { text } = useLanguage(); // ดึงข้อค�
     }, 100);
 
     return () => clearInterval(typingInterval);
-  }, [typingIndex, typePhrases]);  return (
-    <div className="flex flex-col h-screen relative mb-[28rem] w-full md:flex-row" id="home">{/* Content wrapper with proper padding */}
+  }, [typingIndex, typePhrases]);  
+
+  return (
+    <div className="flex flex-col h-screen relative mb-[28rem] w-full md:flex-row" id="home">
+      {/* Content wrapper with proper padding */}
       <div className="relative w-full py-24 md:py-28 flex flex-col md:flex-row gap-10 px-4 md:px-20">
         
         {/* Left section with text */}
@@ -85,16 +90,50 @@ const Hero = () => {  const { text } = useLanguage(); // ดึงข้อค�
         </div>
 
         {/* Right section with image */}
-        <div className="flex justify-center items-center w-full md:w-1/2">
-          <div className="relative w-full h-full max-w-md">
-            <div className={`absolute inset-0 bg-gradient-to-r ${darkMode ? 'from-cyan-500/20 to-blue-500/20' : 'from-blue-500/10 to-cyan-500/10'} rounded-lg transform rotate-3 scale-105`}></div>
+        <div className="flex justify-center items-center w-full md:w-1/2 mt-10 md:mt-0">
+          <div className="relative w-full h-full max-w-lg">
+            <div className={`absolute inset-0 pointer-events-none rounded-lg z-10
+              ${darkMode ? 'ring-4 ring-cyan-400/70 shadow-[0_0_40px_#22d3ee99] animate-pulse' : 'ring-4 ring-blue-400/60 shadow-[0_0_32px_#60a5fa88] animate-pulse'}
+            `} />
             <img
               src="/Img/SKB_8689.jpg"
-              className={`relative rounded-lg w-full h-full object-cover border ${darkMode ? 'border-cyan-500/50 shadow-cyan-500/20 hover:shadow-cyan-400/40' : 'border-blue-400/30 shadow-blue-400/10 hover:shadow-blue-400/30'} shadow-lg transition-all duration-300 hover:scale-[1.02]`}
+              className={`relative rounded-lg w-full h-full object-cover border-4 z-20
+                ${darkMode ? 'border-cyan-400/80 shadow-cyan-400/40' : 'border-blue-400/70 shadow-blue-400/30'}
+                shadow-lg transition-all duration-300 hover:scale-[1.02]`
+              }
               alt="Profile"
             />
-            <div className={`absolute -bottom-4 -right-4 bg-gradient-to-r ${darkMode ? 'from-cyan-500 to-blue-500' : 'from-blue-500 to-cyan-500'} text-white text-xs px-3 py-1 rounded-md font-mono transform rotate-3`}>
+            <div className={`absolute bottom-4 right-4 bg-gradient-to-r ${darkMode ? 'from-cyan-500 to-blue-500' : 'from-blue-500 to-cyan-500'} text-white text-xs px-3 py-1 rounded-md font-mono transform rotate-3 z-30`}> 
               <span className="animate-pulse">&#9679;</span> Online
+            </div>
+            {/* Tech icons row under profile image */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8 md:mt-10 select-none">
+              {/* Row 1 */}
+              <span className="text-3xl md:text-4xl text-cyan-400 drop-shadow-glow-cyan hover:scale-110 transition-transform duration-200">
+                <FaReact title="React.js" />
+              </span>
+              <span className="text-3xl md:text-4xl text-gray-900 dark:text-white drop-shadow-glow-cyan hover:scale-110 transition-transform duration-200">
+                <SiNextdotjs title="Next.js" />
+              </span>
+              <span className="text-3xl md:text-4xl text-blue-500 drop-shadow-glow-cyan hover:scale-110 transition-transform duration-200">
+                <SiTypescript title="TypeScript" />
+              </span>
+              <span className="text-3xl md:text-4xl text-green-500 drop-shadow-glow-cyan hover:scale-110 transition-transform duration-200">
+                <FaNodeJs title="Node.js" />
+              </span>
+              <span className="text-3xl md:text-4xl text-red-500 drop-shadow-glow-cyan hover:scale-110 transition-transform duration-200">
+                <SiNestjs title="Nest.js" />
+              </span>
+              {/* Row 2 */}
+              <span className="text-3xl md:text-4xl text-blue-600 drop-shadow-glow-cyan hover:scale-110 transition-transform duration-200">
+                <SiPostgresql title="PostgreSQL" />
+              </span>
+              <span className="text-3xl md:text-4xl text-blue-400 drop-shadow-glow-cyan hover:scale-110 transition-transform duration-200">
+                <FaDocker title="Docker" />
+              </span>
+              <span className="text-3xl md:text-4xl text-green-600 drop-shadow-glow-cyan hover:scale-110 transition-transform duration-200">
+                <SiMongodb title="MongoDB" />
+              </span>
             </div>
           </div>
         </div>
